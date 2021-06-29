@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
+// master script for all the programming for networking
 public class Launcher : MonoBehaviourPunCallbacks
 {
     public static Launcher Instance;
@@ -29,5 +30,20 @@ public class Launcher : MonoBehaviourPunCallbacks
         PhotonNetwork.AutomaticallySyncScene = true;
 
         Debug.Log("Connected to master");
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        Debug.LogFormat("Disconnected to server for {0}", cause.ToString());
+    }
+
+    public void JoinMainLobby()
+    {
+        PhotonNetwork.JoinLobby();
+    }
+
+    public override void OnJoinedLobby()
+    {
+        Debug.Log("Joined main lobby");
     }
 }
