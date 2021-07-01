@@ -22,16 +22,8 @@ public class RoomListing : MonoBehaviourPunCallbacks
         playerCount.text = roomInfo.PlayerCount.ToString() + "/" + roomInfo.MaxPlayers;
     }
 
-    public void JoinRoom()
+    public void OnClick()
     {
-        PhotonNetwork.JoinRoom(RoomInfo.Name);
-        MenuManager.Instance.OpenMenu("RoomLobby");
-
-        Debug.Log("Joining room");
-    }
-
-    public override void OnJoinRoomFailed(short returnCode, string message)
-    {
-        Debug.LogFormat("Failed to connect to room {0}", message);
+        NetworkManager.Instance.JoinRoom(RoomInfo);
     }
 }

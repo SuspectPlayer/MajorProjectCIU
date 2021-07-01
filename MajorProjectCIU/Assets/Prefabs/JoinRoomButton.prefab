@@ -259,7 +259,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8310048917686802667}
         m_TargetAssemblyTypeName: RoomListing, Assembly-CSharp
-        m_MethodName: JoinRoom
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
