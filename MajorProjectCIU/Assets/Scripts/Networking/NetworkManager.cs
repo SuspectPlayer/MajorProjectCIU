@@ -46,6 +46,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
         buildText.text = "Build Version " + buildVersion;
 
+        PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000"); // sets the player name to a random name for now till player profiles are made
+        Debug.Log(PhotonNetwork.NickName + " has joined the server");
+
         Debug.Log("Connecting online");
     }
 
@@ -53,22 +56,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.AutomaticallySyncScene = true;
 
-        if (!fromRoomLobby)
+        foreach (Button button in mainMenuButtons)
         {
-            foreach (Button button in mainMenuButtons)
-            {
-                button.interactable = true;
-            }
+            button.interactable = true;
+        }
 
-            PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000"); // sets the player name to a random name for now till player profiles are made
-            Debug.Log(PhotonNetwork.NickName + " has joined the server");
-        }
-        else
-        {
-            PhotonNetwork.JoinLobby();
-            fromRoomLobby = false;
-            Debug.Log("Connected to master from room lobby");
-        }
+        ConnectToLobby();
 
         Debug.Log("Connected to master");
     }
@@ -78,14 +71,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.LogFormat("Disconnected to server for {0}", cause.ToString());
     }
 
-    public void JoinMainLobby()
+    public void ConnectToLobby()
     {
         PhotonNetwork.JoinLobby();
-        MenuManager.Instance.OpenMenu("MainLobby");
     }
 
     public override void OnJoinedLobby()
     {
+        if (!fromRoomLobby)
+        {
+            MenuManager.Instance.OpenMenu("Main");
+            fromRoomLobby = true;
+        }
+        else
+        {
+            MenuManager.Instance.OpenMenu("MainLobby");
+        }
+
         Debug.Log("Joined main lobby");
     }
 
@@ -99,17 +101,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void CreateNewRoom()
     {
-        if (string.IsNullOrEmpty(roomNameInputField.text)
-            || !PhotonNetwork.IsConnected)
-        {
-            return;
-        }
+        string roomName = roomNameInputField.text;
+
+        roomName = (roomName.Equals(string.Empty)) ? "Room " + Random.Range(0, 20) : roomName;
 
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 8;
         roomOptions.EmptyRoomTtl = 0;
 
-        PhotonNetwork.CreateRoom(roomNameInputField.text, roomOptions);
+        PhotonNetwork.CreateRoom(roomName, roomOptions);
         MenuManager.Instance.OpenMenu("RoomLobby");
 
         Debug.Log("Created room");
@@ -142,6 +142,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         MenuManager.Instance.OpenMenu("MainLobby");
+        ConnectToLobby();
 
         Debug.Log("Left room");
     }

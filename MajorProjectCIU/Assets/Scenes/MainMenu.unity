@@ -6336,7 +6336,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1910318356}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
-        m_MethodName: JoinMainLobby
+        m_MethodName: ConnectToLobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
