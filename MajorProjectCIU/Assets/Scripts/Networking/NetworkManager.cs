@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine.UI;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -108,10 +109,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 8;
         roomOptions.EmptyRoomTtl = 0;
+        roomOptions.BroadcastPropsChangeToAll = true;
+
+        roomOptions.CustomRoomProperties = new Hashtable() 
+        {
+            { "RedTeam", 0 }, { "BlueTeam", 0 }
+        };
 
         PhotonNetwork.CreateRoom(roomName, roomOptions);
         MenuManager.Instance.OpenMenu("RoomLobby");
 
+        Debug.Log(roomOptions.CustomRoomProperties["RedTeam"].ToString());
+        Debug.Log(roomOptions.CustomRoomProperties["BlueTeam"].ToString());
         Debug.Log("Created room");
     }
 
@@ -135,6 +144,30 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void LeaveRoomLobby()
     {
+        if (PhotonNetwork.CurrentRoom != null)
+        {
+            if ((int)PhotonNetwork.LocalPlayer.CustomProperties["PlayerTeam"] == 0)
+            {
+                int currentIndex = (int)PhotonNetwork.CurrentRoom.CustomProperties["RedTeam"];
+                int newIndex = currentIndex - 1;
+
+                PhotonNetwork.CurrentRoom.SetCustomProperties(new Hashtable
+                {
+                    { "RedTeam", newIndex }
+                });
+            }
+            else
+            {
+                int currentIndex = (int)PhotonNetwork.CurrentRoom.CustomProperties["BlueTeam"];
+                int newIndex = currentIndex - 1;
+
+                PhotonNetwork.CurrentRoom.SetCustomProperties(new Hashtable
+                {
+                    { "BlueTeam", newIndex }
+                });
+            }
+        }
+
         PhotonNetwork.LeaveRoom();
         fromRoomLobby = true;
     }
