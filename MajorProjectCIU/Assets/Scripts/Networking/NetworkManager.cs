@@ -31,7 +31,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -174,9 +173,21 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()
     {
-        MenuManager.Instance.OpenMenu("MainLobby");
+        if (fromRoomLobby)
+        {
+            MenuManager.Instance.OpenMenu("MainLobby");
+        }
+        else
+        {
+            MenuManager.Instance.OpenMenu("Main");
+        }
         ConnectToLobby();
 
         Debug.Log("Left room");
+    }
+
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel(1);
     }
 }

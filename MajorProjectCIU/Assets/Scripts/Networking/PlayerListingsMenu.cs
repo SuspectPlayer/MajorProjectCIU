@@ -92,6 +92,18 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
 
         base.OnPlayerPropertiesUpdate(targetPlayer, changedProps);
         PopulateLists();
+
+        if ((int)PhotonNetwork.CurrentRoom.CustomProperties["RedTeam"] == (int)PhotonNetwork.CurrentRoom.CustomProperties["BlueTeam"])
+        {
+            if (PhotonNetwork.IsMasterClient)
+            {
+                startButton.SetActive(true);
+            }
+        }
+        else
+        {
+            startButton.SetActive(false);
+        }
     }
 
     public void PopulateLists()
