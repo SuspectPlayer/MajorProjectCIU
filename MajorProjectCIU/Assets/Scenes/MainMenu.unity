@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2168.416, g: 2280.9258, b: 3351.0117, a: 1}
+  m_IndirectSpecularColor: {r: 2163.5713, g: 2271.498, b: 3323.1602, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3059,7 +3059,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 322883192}
         m_TargetAssemblyTypeName: CreateJoinCastle, Assembly-CSharp
-        m_MethodName: CreateOrJoinCastle
+        m_MethodName: JoinCastleRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

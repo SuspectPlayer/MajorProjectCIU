@@ -11,19 +11,30 @@ public class CreateJoinCastle : MonoBehaviourPunCallbacks
 
     public const string MAP = "map";
 
-    public void CreateOrJoinCastle()
+    public void JoinCastleRoom()
     {
-        Hashtable expectedCustomRoomProperties = new Hashtable() 
-        {
-            { MAP, 0 }
-        };
-        MatchmakingMode matchmakingMode = MatchmakingMode.RandomMatching;
-        string roomName = $"Room {Random.Range(0, 20)}";
-        RoomOptions roomOptions = new RoomOptions();
-        roomOptions.IsVisible = false;
+        Hashtable expectedCustomRoomProperties = new Hashtable { { MAP, 1 } };
 
-        PhotonNetwork.JoinRandomOrCreateRoom(expectedCustomRoomProperties, maxPlayersPerCastle, matchmakingMode,
-            null, null, roomName, roomOptions);
+        PhotonNetwork.JoinRandomRoom(expectedCustomRoomProperties, maxPlayersPerCastle);
+    }
+
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        base.OnJoinRandomFailed(returnCode, message);
+        CreateCastleRoom();
+    }
+
+    void CreateCastleRoom()
+    {
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.CustomRoomPropertiesForLobby = new string[] { MAP };
+        roomOptions.MaxPlayers = maxPlayersPerCastle;
+        roomOptions.BroadcastPropsChangeToAll = true;
+
+        roomOptions.CustomRoomProperties = new Hashtable() { { MAP, 1 } };
+        //roomOptions.IsVisible = false;
+
+        PhotonNetwork.CreateRoom(null, roomOptions);
         PhotonNetwork.LoadLevel(1);
     }
 }
