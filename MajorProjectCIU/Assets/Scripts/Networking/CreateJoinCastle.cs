@@ -11,15 +11,19 @@ public class CreateJoinCastle : MonoBehaviourPunCallbacks
 
     public const string MAP = "map";
 
-    public void CraeteOrJoinCastle()
+    public void CreateOrJoinCastle()
     {
         Hashtable expectedCustomRoomProperties = new Hashtable() 
         {
             { MAP, 0 }
         };
         MatchmakingMode matchmakingMode = MatchmakingMode.RandomMatching;
+        string roomName = $"Room {Random.Range(0, 20)}";
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.IsVisible = false;
 
-        PhotonNetwork.JoinRandomOrCreateRoom(expectedCustomRoomProperties, maxPlayersPerCastle, matchmakingMode);
+        PhotonNetwork.JoinRandomOrCreateRoom(expectedCustomRoomProperties, maxPlayersPerCastle, matchmakingMode,
+            null, null, roomName, roomOptions);
         PhotonNetwork.LoadLevel(1);
     }
 }
