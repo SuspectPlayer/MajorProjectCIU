@@ -48,21 +48,26 @@ public class ThirdPersonMovement : MonoBehaviourPunCallbacks
         }
 
         velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        // Animator Params
+        GetComponent<Animator>().SetFloat("HSpeed", horizontal);
+        GetComponent<Animator>().SetFloat("VSpeed", vertical);
 
-        if (direction.magnitude >= 0.1f)
+        Vector3 move = new Vector3(horizontal, 0f, vertical);
+
+        // Change rotation of player to face direction to the same direction the camera is facing
+        if (move.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + playerCamera.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+               transform.localEulerAngles = new Vector3(transform.localEulerAngles.x,
+               Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z);
 
-            Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDirection.normalized * moveSpeed * Time.deltaTime);
+            
         }
+
+        controller.Move(move * Time.deltaTime * moveSpeed);
     }
 }
