@@ -85,6 +85,7 @@ namespace StarterAssets
 		private Animator _animator;
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
+		[SerializeField]
 		private GameObject _mainCamera;
 
 		private const float _threshold = 0.01f;
