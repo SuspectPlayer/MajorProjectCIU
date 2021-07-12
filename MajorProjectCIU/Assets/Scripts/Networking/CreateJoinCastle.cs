@@ -9,7 +9,7 @@ public class CreateJoinCastle : MonoBehaviourPunCallbacks
 {
     public byte maxPlayersPerCastle = 10;
 
-    public const string MAP = "map";
+    public const string MAP = "Map";
 
     public void JoinCastleRoom()
     {
@@ -32,7 +32,6 @@ public class CreateJoinCastle : MonoBehaviourPunCallbacks
         roomOptions.BroadcastPropsChangeToAll = true;
 
         roomOptions.CustomRoomProperties = new Hashtable() { { MAP, 1 } };
-        //roomOptions.IsVisible = false;
 
         PhotonNetwork.CreateRoom(null, roomOptions);
         PhotonNetwork.LoadLevel(1);

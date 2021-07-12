@@ -112,12 +112,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         roomOptions.CustomRoomProperties = new Hashtable() 
         {
-            { "RedTeam", 0 }, { "BlueTeam", 0 }
+            { "RedTeam", 0 }, { "BlueTeam", 0 }, { "Map", 2 }
         };
+
+        roomOptions.CustomRoomPropertiesForLobby = new string[] { "Map" };
 
         PhotonNetwork.CreateRoom(roomName, roomOptions);
         MenuManager.Instance.OpenMenu("RoomLobby");
 
+        Debug.Log(roomOptions.CustomRoomProperties["Map"].ToString());
         Debug.Log(roomOptions.CustomRoomProperties["RedTeam"].ToString());
         Debug.Log(roomOptions.CustomRoomProperties["BlueTeam"].ToString());
         Debug.Log("Created room");
