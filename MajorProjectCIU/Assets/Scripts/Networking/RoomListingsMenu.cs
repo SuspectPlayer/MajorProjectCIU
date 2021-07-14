@@ -24,7 +24,8 @@ public class RoomListingsMenu : MonoBehaviourPunCallbacks
             if (roomList[i].RemovedFromList)
                 continue;
 
-            Instantiate(roomListingPrefab, roomListingContent).GetComponent<RoomListing>().SetRoomInfo(roomList[i]);
+            if((int)roomList[i].CustomProperties["Map"] != 1)
+                Instantiate(roomListingPrefab, roomListingContent).GetComponent<RoomListing>().SetRoomInfo(roomList[i]);
         }
         // join main lobby to fix room dissapearing bug
         Debug.Log("List updated");
