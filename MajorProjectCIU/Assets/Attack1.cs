@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using StarterAssets;
-public class TransitionBehaviour1 : StateMachineBehaviour
+public class Attack1 : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -25,12 +25,6 @@ public class TransitionBehaviour1 : StateMachineBehaviour
             Debug.Log("Attacked");
             animator.GetComponent<ThirdPersonController>()._input.attack2 = false;
         }
-        if (animator.GetComponent<ThirdPersonController>()._input.attack3)
-        {
-            animator.SetTrigger("Attack3");
-            Debug.Log("Attacked");
-            animator.GetComponent<ThirdPersonController>()._input.attack3 = false;
-        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -51,3 +45,4 @@ public class TransitionBehaviour1 : StateMachineBehaviour
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
 }
+

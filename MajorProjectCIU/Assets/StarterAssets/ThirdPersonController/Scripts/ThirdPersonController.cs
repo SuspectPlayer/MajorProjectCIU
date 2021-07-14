@@ -37,6 +37,7 @@ namespace StarterAssets
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float FallTimeout = 0.15f;
 
+
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 		public bool Grounded = true;
@@ -75,6 +76,7 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
+
 		// animation IDs
 		private int _animIDSpeed;
 		private int _animIDGrounded;
@@ -84,13 +86,17 @@ namespace StarterAssets
 
 		private Animator _animator;
 		private CharacterController _controller;
-		private StarterAssetsInputs _input;
+		public StarterAssetsInputs _input;
 		[SerializeField]
 		private GameObject _mainCamera;
 
 		private const float _threshold = 0.01f;
 
 		private bool _hasAnimator;
+
+		// combat bools
+
+		public bool canAttack;
 
 		private void Awake()
 		{
@@ -112,7 +118,8 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
-		}
+
+	}
 
 		private void Update()
 		{
@@ -121,7 +128,24 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+
+			// Added Functions
+			//Attack1();
 		}
+
+		//private void Attack1()
+  //      {
+  //          if (_input.attack1)
+  //          {
+		//		if (canAttack)
+		//		{
+		//			_animator.SetTrigger("Attack1");
+		//		}
+		//		Debug.Log("Attacked");
+		//		_input.attack1 = false;
+  //          }
+			
+		//}
 
 		private void LateUpdate()
 		{

@@ -12,6 +12,9 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool attack1;
+		public bool attack2;
+		public bool attack3;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -45,6 +48,18 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+		public void OnAttack1(InputValue value)
+		{
+			Attack1Input(value.isPressed);
+		}
+		public void OnAttack2(InputValue value)
+		{
+			Attack2Input(value.isPressed);
+		}
+		public void OnAttack3(InputValue value)
+		{
+			Attack3Input(value.isPressed);
+		}
 #else
 	// old input sys if we do decide to have it (most likely wont)...
 #endif
@@ -63,6 +78,18 @@ namespace StarterAssets
 		public void JumpInput(bool newJumpState)
 		{
 			jump = newJumpState;
+		}
+		public void Attack1Input(bool newAttack1State)
+		{
+			attack1 = newAttack1State;
+		}
+		public void Attack2Input(bool newAttack2State)
+		{
+			attack2 = newAttack2State;
+		}
+		public void Attack3Input(bool newAttack3State)
+		{
+			attack3 = newAttack3State;
 		}
 
 		public void SprintInput(bool newSprintState)
