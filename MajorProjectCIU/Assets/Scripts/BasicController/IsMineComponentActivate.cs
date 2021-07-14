@@ -5,7 +5,8 @@ using Photon.Pun;
 
 public class IsMineComponentActivate : MonoBehaviourPunCallbacks
 {
-    public ThirdPersonMovement thirdPersonMovement;
+    public StarterAssets.ThirdPersonController thirdPersonController;
+    public GameObject mainCamera;
     public GameObject playerCamera;
 
     public PhotonView photonView;
@@ -16,8 +17,9 @@ public class IsMineComponentActivate : MonoBehaviourPunCallbacks
 
         if (photonView.IsMine)
         {
-            thirdPersonMovement.enabled = true;
+            thirdPersonController.enabled = true;
             playerCamera.SetActive(true);
+            mainCamera.SetActive(true);
         }
     }
 }
