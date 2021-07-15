@@ -7,7 +7,6 @@ public class ThirdPersonMovement : MonoBehaviourPunCallbacks
 {
     [Header("Components")]
     [SerializeField]
-    private PhotonView photonView;
     public CharacterController controller;
     public Animator animator;
     public Transform playerCamera;
@@ -30,7 +29,6 @@ public class ThirdPersonMovement : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
-        if (photonView == null) photonView = GetComponent<PhotonView>();
         playerCamera = Camera.main.transform;
     }
 
