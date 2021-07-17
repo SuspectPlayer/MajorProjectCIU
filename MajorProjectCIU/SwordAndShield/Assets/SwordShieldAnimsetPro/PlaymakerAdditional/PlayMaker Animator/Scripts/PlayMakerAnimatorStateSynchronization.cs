@@ -135,7 +135,8 @@ public class PlayMakerAnimatorStateSynchronization : MonoBehaviour
 		// if we have not succeeded with any potential transitions, we look for states
 		if (!hasSwitchedState)
 		{
-			int _currentState = animator.GetCurrentAnimatorStateInfo(LayerIndex).nameHash;
+			
+			int _currentState = animator.GetCurrentAnimatorStateInfo(LayerIndex).fullPathHash;
 			if (lastState != _currentState)
 			{
 				if (debug) Debug.Log("Net state switch");

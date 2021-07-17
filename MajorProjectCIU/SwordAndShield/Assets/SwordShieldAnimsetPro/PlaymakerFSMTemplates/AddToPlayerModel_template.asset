@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -93,6 +94,7 @@ MonoBehaviour:
         toState: CheckIfEnemyIsDodging
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: FINISHED
@@ -101,6 +103,7 @@ MonoBehaviour:
         toState: NotDealingDamage 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -196,6 +199,7 @@ MonoBehaviour:
         toState: GetRaycaster
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -261,6 +265,7 @@ MonoBehaviour:
         toState: NotDealingDamage 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -349,8 +354,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 452.08594
-        y: 525.6406
+        x: 453.08594
+        y: 531.6406
         width: 161
         height: 32
       isBreakpoint: 0
@@ -364,6 +369,7 @@ MonoBehaviour:
         toState: NotDealingDamage 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -485,6 +491,7 @@ MonoBehaviour:
         toState: DealDamagetoEnemy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: yes
@@ -493,6 +500,7 @@ MonoBehaviour:
         toState: NotDealingDamage 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: FINISHED
@@ -501,6 +509,7 @@ MonoBehaviour:
         toState: NotDealingDamage 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -621,6 +630,7 @@ MonoBehaviour:
       toState: CheckWhatWasHit
       linkStyle: 0
       linkConstraint: 0
+      linkTarget: 0
       colorIndex: 0
     variables:
       floatVariables: []
@@ -682,14 +692,15 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
     description: 'IMPORTANT FSM!!!!!!!
 
 
       COPY IT TO YOUR OWN CHARACTER MODEL!!!!
 
 
-      It reads the Animator Events, so it has to be attached to your character, that
+      It
+      reads the Animator Events, so it has to be attached to your character, that
       has Animator Component.
 
 
@@ -701,10 +712,13 @@ MonoBehaviour:
     password: 
     locked: 0
     manualUpdate: 0
+    outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []
+    OutputEvents: []
     RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
     EnableDebugFlow: 0
     EnableBreakpoints: 1
     editorFlags: 3
@@ -731,6 +745,7 @@ MonoBehaviour:
     handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
     handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0

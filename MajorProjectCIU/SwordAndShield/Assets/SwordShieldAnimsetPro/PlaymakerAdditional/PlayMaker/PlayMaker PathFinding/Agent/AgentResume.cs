@@ -46,8 +46,8 @@ namespace HutongGames.PlayMaker.Actions
 			{
 				return;
 			}
-			
-			_agent.Resume();
+			_agent.isStopped = false;
+			//_agent.Resume();
 		}
 
 	}
