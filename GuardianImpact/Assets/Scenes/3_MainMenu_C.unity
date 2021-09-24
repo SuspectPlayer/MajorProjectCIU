@@ -2413,7 +2413,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736630442}
-  m_LocalRotation: {x: 0.013356024, y: 0.11049193, z: -0.0014849603, w: 0.99378616}
+  m_LocalRotation: {x: 0.013356049, y: 0.11049197, z: -0.0014849633, w: 0.99378616}
   m_LocalPosition: {x: -0.8408192, y: 1.121, z: -2.2483585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2906,6 +2906,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &749344830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 749344832}
+  - component: {fileID: 749344831}
+  m_Layer: 0
+  m_Name: PhotonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &749344831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749344830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb129a12a105f04c83462d4c827d16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  matchmakingButton: {fileID: 2052012474}
+  cancelMatchmakingButton: {fileID: 1726545685}
+  maxPlayers: 8
+--- !u!4 &749344832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749344830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 310.88605, y: 349.02002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &754971784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 468508, guid: 7bd6629adca0e514f82d999d076ff30c, type: 3}
@@ -6764,6 +6810,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788021791}
   m_CullTransparentMesh: 1
+--- !u!1 &1795538729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795538731}
+  - component: {fileID: 1795538730}
+  m_Layer: 0
+  m_Name: PanelMessagesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1795538730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795538729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68ad9b46ad19574ea03eaeac29bb14e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelMessagePrefab: {fileID: 1981559605974031728, guid: e50f39b5a98268340a9d40dd32214bba, type: 3}
+  messagePanelContent: {fileID: 1416207419}
+  headerFailTextColor: {r: 1, g: 0, b: 0, a: 1}
+  regularFailTextColor: {r: 1, g: 0.504717, b: 0.504717, a: 1}
+  regularSuccessTextColor: {r: 0, g: 0.6320754, b: 0.11133969, a: 1}
+  neutralTextColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1795538731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795538729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 229.16473, y: 352.69724, z: -60.090633}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1809487839 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 475376, guid: 80d9521ecacede842b291b042fdb1e50, type: 3}
@@ -7161,7 +7256,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929463853}
-  m_LocalRotation: {x: 0.013356024, y: 0.11049193, z: -0.0014849603, w: 0.99378616}
+  m_LocalRotation: {x: 0.013356049, y: 0.11049197, z: -0.0014849633, w: 0.99378616}
   m_LocalPosition: {x: -0.8408192, y: 1.121, z: -2.2483585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8623,11 +8718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: {fileID: 907174836}
   password: {fileID: 1462565215}
-  panelMessagePrefab: {fileID: 1981559605974031728, guid: e50f39b5a98268340a9d40dd32214bba, type: 3}
-  messagePanelContent: {fileID: 1416207419}
-  headerFailTextColor: {r: 1, g: 0, b: 0, a: 1}
-  regularFailTextColor: {r: 1, g: 0.43867922, b: 0.43867922, a: 1}
-  regularSuccessTextColor: {r: 0.07649539, g: 0.6792453, b: 0, a: 1}
+  loginButton: {fileID: 802531541}
+  registerButton: {fileID: 1562554130}
 --- !u!4 &2117454354
 Transform:
   m_ObjectHideFlags: 0
