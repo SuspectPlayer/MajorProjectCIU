@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/3_MainMenu_C.unity
     guid: df7023b2f7479f5418bf91763798a3fe
   - enabled: 1
-    path: Assets/Scenes/4_MainLevel_S.unity
-    guid: 8484ccd583a70fe4da77b1ff18582cc4
+    path: Assets/Scenes/PlaceholderWaitingScene.unity
+    guid: 54daeac8b386e524d97ad3ba7276f9d4
   m_configObjects: {}

@@ -4,29 +4,31 @@ using UnityEngine;
 using TMPro;
 public class JoinGameTimer : MonoBehaviour
 {
+    public static JoinGameTimer master;
     public TMP_Text timerText;
     public float timer = 1;
-    StartGameManager startGameManager;
-    private void Start()
+    public bool timerOn = false;
+    private void Awake()
     {
-        startGameManager = GetComponent<StartGameManager>();
+        if (master != null) Destroy(this);
+        master = this;
     }
     void Update()
     {
         timerText.text = string.Format("{00}", (int)timer);
         
-        if (timer < 99 && startGameManager.timerOn) 
+        if (timer <= 99 && timerOn) 
         {
             timer += Time.deltaTime;
         }
 
-        if(timer >= 99)
+        if(timer > 99)
         {
             timer = 0;
         }
 
 
-        if (!startGameManager.timerOn)
+        if (!timerOn)
         {
             timer = 0;
         }

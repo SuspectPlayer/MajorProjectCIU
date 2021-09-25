@@ -14,7 +14,10 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
     [SerializeField] Button matchmakingButton;
     [SerializeField] Button cancelMatchmakingButton;
+    [SerializeField] GameObject messageBox;
+    [SerializeField] TextMeshProUGUI playersInRoomText;
     [SerializeField] byte maxPlayers = 8;
+    [SerializeField] int waitingServerIndex = 4;
 
 
     #region Monobehavior methods
@@ -24,7 +27,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         if (master != null) Destroy(this);
         master = this;
         // If you are in a room and the owner loads a new scene it will load the same scene for everyone in the room
-        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.AutomaticallySyncScene = false;
+        IdleMenu();
     }
 
     private void Update()
@@ -37,7 +41,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
     #endregion Monobehavior methods
 
-    #region Photon functions
+    #region Photon custom functions
     void JoinRandomRoom(byte expectedMaxPlayers)
     {
         PhotonNetwork.JoinRandomRoom(null, expectedMaxPlayers, MatchmakingMode.FillRoom, TypedLobby.Default, null);
@@ -51,12 +55,30 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         // Create a room
         PhotonNetwork.CreateRoom(null, thisRoomOptions);
     }
+    void UpdatePlayersInRoom() 
+    {
+        playersInRoomText.text = $"{PhotonNetwork.CurrentRoom.PlayerCount}/{PhotonNetwork.CurrentRoom.MaxPlayers}";
+    }
+    #endregion Photon custom functions
+
+    #region Photon override functions
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        base.OnPlayerEnteredRoom(newPlayer);
+        UpdatePlayersInRoom();
+    }
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        base.OnPlayerLeftRoom(otherPlayer);
+        UpdatePlayersInRoom();
+    }
     public override void OnJoinedRoom()
     {
         // Load in the lobby level
-        Debug.Log($"Player successfully joined a room");
+        PanelMessagesManager.master.InstantiateMessage($"Room joined!", PanelMessageColor.neutralColor);
         matchmakingButton.gameObject.SetActive(false);
         cancelMatchmakingButton.gameObject.SetActive(true);
+        UpdatePlayersInRoom();
     }
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
@@ -96,7 +118,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         matchmakingButton.gameObject.SetActive(true); matchmakingButton.interactable = true;
         cancelMatchmakingButton.gameObject.SetActive(false);
     }
-    #endregion Photon functions
+    #endregion Photon override functions
 
     #region Other functions
     /// <summary>
@@ -139,12 +161,28 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     }
     #endregion Other functions
     #region Button functions
-    public void StartMatchmakingButton()
+    public void LookForPlayers()
     {
-        // Turn off interactibility on the matchmaking button to avoid spam before the player has joined a room
-        matchmakingButton.interactable = false;
+        messageBox.SetActive(true);
+        matchmakingButton.gameObject.SetActive(false);
+        cancelMatchmakingButton.gameObject.SetActive(true);
+        JoinGameTimer.master.timerOn = true;
         // Join a room
         JoinRandomRoom(maxPlayers);
+    }
+    public void IdleMenu()
+    {
+        messageBox.SetActive(false);
+        matchmakingButton.gameObject.SetActive(true);
+        cancelMatchmakingButton.gameObject.SetActive(false);
+        JoinGameTimer.master.timerOn = false;
+        if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
+    }
+    public void JoinWaitingServer()
+    {
+        if (!PhotonNetwork.InRoom) return;
+        if (PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers) return;
+        PhotonNetwork.LoadLevel(waitingServerIndex);
     }
     #endregion Button functions
 }
