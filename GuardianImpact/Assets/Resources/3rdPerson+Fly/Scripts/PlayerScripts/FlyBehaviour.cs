@@ -25,35 +25,39 @@ public class FlyBehaviour : GenericBehaviour
 	// Update is used to set features regardless the active behaviour.
 	void Update()
 	{
-		// Toggle fly by input, only if there is no overriding state or temporary transitions.
-		if (Input.GetButtonDown(flyButton) && !behaviourManager.IsOverriding() 
-			&& !behaviourManager.GetTempLockStatus(behaviourManager.GetDefaultBehaviour))
+		if(photonView.IsMine || behaviourManager.offlineMode)
 		{
-			fly = !fly;
-
-			// Force end jump transition.
-			behaviourManager.UnlockTempBehaviour(behaviourManager.GetDefaultBehaviour);
-
-			// Obey gravity. It's the law!
-			behaviourManager.GetRigidBody.useGravity = !fly;
-
-			// Player is flying.
-			if (fly)
+			// Toggle fly by input, only if there is no overriding state or temporary transitions.
+			if (Input.GetButtonDown(flyButton) && !behaviourManager.IsOverriding()
+				&& !behaviourManager.GetTempLockStatus(behaviourManager.GetDefaultBehaviour))
 			{
-				// Register this behaviour.
-				behaviourManager.RegisterBehaviour(this.behaviourCode);
-			}
-			else
-			{
-				// Set collider direction to vertical.
-				col.direction = 1;
-				// Set camera default offset.
-				behaviourManager.GetCamScript.ResetTargetOffsets();
+				fly = !fly;
 
-				// Unregister this behaviour and set current behaviour to the default one.
-				behaviourManager.UnregisterBehaviour(this.behaviourCode);
+				// Force end jump transition.
+				behaviourManager.UnlockTempBehaviour(behaviourManager.GetDefaultBehaviour);
+
+				// Obey gravity. It's the law!
+				behaviourManager.GetRigidBody.useGravity = !fly;
+
+				// Player is flying.
+				if (fly)
+				{
+					// Register this behaviour.
+					behaviourManager.RegisterBehaviour(this.behaviourCode);
+				}
+				else
+				{
+					// Set collider direction to vertical.
+					col.direction = 1;
+					// Set camera default offset.
+					behaviourManager.GetCamScript.ResetTargetOffsets();
+
+					// Unregister this behaviour and set current behaviour to the default one.
+					behaviourManager.UnregisterBehaviour(this.behaviourCode);
+				}
 			}
 		}
+		
 
 		// Assert this is the active behaviour
 		fly = fly && behaviourManager.IsCurrentBehaviour(this.behaviourCode);

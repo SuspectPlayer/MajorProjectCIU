@@ -35,9 +35,12 @@ public class MoveBehaviour : GenericBehaviour
 	void Update()
 	{
 		// Get jump input.
-		if (!jump && Input.GetButtonDown(jumpButton) && behaviourManager.IsCurrentBehaviour(this.behaviourCode) && !behaviourManager.IsOverriding())
+		if(photonView.IsMine || behaviourManager.offlineMode)
 		{
-			jump = true;
+			if (!jump && Input.GetButtonDown(jumpButton) && behaviourManager.IsCurrentBehaviour(this.behaviourCode) && !behaviourManager.IsOverriding())
+			{
+				jump = true;
+			}
 		}
 	}
 

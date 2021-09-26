@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Photon.Pun;
 
 // This class manages which player behaviour is active or overriding, and call its local functions.
 // Contains basic setup and common functions used by all the player behaviours.
-public class BasicBehaviour : MonoBehaviour
+public class BasicBehaviour : MonoBehaviourPun
 {
+	public bool offlineMode = false;
 	public Transform playerCamera;                        // Reference to the camera that focus the player.
 	public float turnSmoothing = 0.06f;                   // Speed of turn when moving to match camera facing.
 	public float sprintFOV = 100f;                        // the FOV to use on the camera when player is sprinting.
@@ -58,32 +60,37 @@ public class BasicBehaviour : MonoBehaviour
 		// Grounded verification variables.
 		groundedBool = Animator.StringToHash("Grounded");
 		colExtents = GetComponent<Collider>().bounds.extents;
+
+		if (!offlineMode && !photonView.IsMine) playerCamera.gameObject.SetActive(false);
 	}
 
 	void Update()
 	{
-		// Store the input axes.
-		h = Input.GetAxis("Horizontal");
-		v = Input.GetAxis("Vertical");
+		if(photonView.IsMine || offlineMode)
+		{
+			// Store the input axes.
+			h = Input.GetAxis("Horizontal");
+			v = Input.GetAxis("Vertical");
+			// Toggle sprint by input.
+			sprint = Input.GetButton(sprintButton);
+
+			// Set the correct camera FOV for sprint mode.
+			if (IsSprinting())
+			{
+				changedFOV = true;
+				camScript.SetFOV(sprintFOV);
+			}
+			else if (changedFOV)
+			{
+				camScript.ResetFOV();
+				changedFOV = false;
+			}
+		}
 
 		// Set the input axes on the Animator Controller.
 		anim.SetFloat(hFloat, h, 0.1f, Time.deltaTime);
 		anim.SetFloat(vFloat, v, 0.1f, Time.deltaTime);
 
-		// Toggle sprint by input.
-		sprint = Input.GetButton (sprintButton);
-
-		// Set the correct camera FOV for sprint mode.
-		if(IsSprinting())
-		{
-			changedFOV = true;
-			camScript.SetFOV(sprintFOV);
-		}
-		else if(changedFOV)
-		{
-			camScript.ResetFOV();
-			changedFOV = false;
-		}
 		// Set the grounded test on the Animator Controller.
 		anim.SetBool(groundedBool, IsGrounded());
 	}
@@ -328,7 +335,7 @@ public class BasicBehaviour : MonoBehaviour
 
 // This is the base class for all player behaviours, any custom behaviour must inherit from this.
 // Contains references to local components that may differ according to the behaviour itself.
-public abstract class GenericBehaviour : MonoBehaviour
+public abstract class GenericBehaviour : MonoBehaviourPun
 {
 	//protected Animator anim;                       // Reference to the Animator component.
 	protected int speedFloat;                      // Speed parameter on the Animator.

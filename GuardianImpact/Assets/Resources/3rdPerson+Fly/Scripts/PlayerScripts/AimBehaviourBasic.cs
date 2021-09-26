@@ -23,26 +23,28 @@ public class AimBehaviourBasic : GenericBehaviour
 	// Update is used to set features regardless the active behaviour.
 	void Update ()
 	{
-		// Activate/deactivate aim by input.
-		if (Input.GetAxisRaw(aimButton) != 0 && !aim)
-		{
-			StartCoroutine(ToggleAimOn());
-		}
-		else if (aim && Input.GetAxisRaw(aimButton) == 0)
-		{
-			StartCoroutine(ToggleAimOff());
-		}
+		if (photonView.IsMine || behaviourManager.offlineMode)
+        {
+			// Activate/deactivate aim by input.
+			if (Input.GetAxisRaw(aimButton) != 0 && !aim)
+			{
+				StartCoroutine(ToggleAimOn());
+			}
+			else if (aim && Input.GetAxisRaw(aimButton) == 0)
+			{
+				StartCoroutine(ToggleAimOff());
+			}
 
-		// No sprinting while aiming.
-		canSprint = !aim;
+			// No sprinting while aiming.
+			canSprint = !aim;
 
-		// Toggle camera aim position left or right, switching shoulders.
-		if (aim && Input.GetButtonDown (shoulderButton))
-		{
-			aimCamOffset.x = aimCamOffset.x * (-1);
-			aimPivotOffset.x = aimPivotOffset.x * (-1);
+			// Toggle camera aim position left or right, switching shoulders.
+			if (aim && Input.GetButtonDown(shoulderButton))
+			{
+				aimCamOffset.x = aimCamOffset.x * (-1);
+				aimPivotOffset.x = aimPivotOffset.x * (-1);
+			}
 		}
-
 		// Set aim boolean on the Animator Controller.
 		behaviourManager.GetAnim.SetBool (aimBool, aim);
 	}
@@ -123,7 +125,7 @@ public class AimBehaviourBasic : GenericBehaviour
  	// Draw the crosshair when aiming.
 	void OnGUI () 
 	{
-		if (crosshair)
+		if (crosshair && (photonView.IsMine || behaviourManager.offlineMode))
 		{
 			float mag = behaviourManager.GetCamScript.GetCurrentPivotMagnitude(aimPivotOffset);
 			if (mag < 0.05f)
