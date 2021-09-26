@@ -11,7 +11,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     public static PhotonManager master;
     bool loggedIntoPlayfab;
     string gameVersion = "0.001";
-
+    [SerializeField] bool forceJoinWaitingServer;
     [SerializeField] Button matchmakingButton;
     [SerializeField] Button cancelMatchmakingButton;
     [SerializeField] GameObject messageBox;
@@ -27,7 +27,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         if (master != null) Destroy(this);
         master = this;
         // If you are in a room and the owner loads a new scene it will load the same scene for everyone in the room
-        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.AutomaticallySyncScene = forceJoinWaitingServer ? true : false ;
         IdleMenu();
     }
 
@@ -74,11 +74,16 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
-        // Load in the lobby level
-        PanelMessagesManager.master.InstantiateMessage($"Room joined!", PanelMessageColor.neutralColor);
-        matchmakingButton.gameObject.SetActive(false);
-        cancelMatchmakingButton.gameObject.SetActive(true);
-        UpdatePlayersInRoom();
+
+        if (forceJoinWaitingServer) PhotonNetwork.LoadLevel(waitingServerIndex);
+        else
+        {
+            // Load in the lobby level
+            PanelMessagesManager.master.InstantiateMessage($"Room joined!", PanelMessageColor.neutralColor);
+            matchmakingButton.gameObject.SetActive(false);
+            cancelMatchmakingButton.gameObject.SetActive(true);
+            UpdatePlayersInRoom();
+        }
     }
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
@@ -163,10 +168,13 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     #region Button functions
     public void LookForPlayers()
     {
-        messageBox.SetActive(true);
         matchmakingButton.gameObject.SetActive(false);
-        cancelMatchmakingButton.gameObject.SetActive(true);
-        JoinGameTimer.master.timerOn = true;
+        if (!forceJoinWaitingServer)
+        {
+            messageBox.SetActive(true);
+            cancelMatchmakingButton.gameObject.SetActive(true);
+            JoinGameTimer.master.timerOn = true;
+        }
         // Join a room
         JoinRandomRoom(maxPlayers);
     }
@@ -181,7 +189,6 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     public void JoinWaitingServer()
     {
         if (!PhotonNetwork.InRoom) return;
-        if (PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers) return;
         PhotonNetwork.LoadLevel(waitingServerIndex);
     }
     #endregion Button functions

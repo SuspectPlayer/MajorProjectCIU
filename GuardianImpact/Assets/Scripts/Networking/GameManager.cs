@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 using System.IO;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviourPun
+public class GameManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] string[] playerPrefabs;
     [SerializeField] Transform[] spawnPoints;
@@ -49,6 +51,14 @@ public class GameManager : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
+        }
+    }
+
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Single);
     }
 }
