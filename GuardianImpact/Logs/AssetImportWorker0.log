@@ -1,54 +1,1148 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.9f1 (108be757e447) revision 1084391'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 32571 MB
+OS: 'Windows 10 Pro; OS build 19042.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 16263 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Apps\Unity\Editors\2020.3.9f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Apps/Unity/Projects/MajorProjectCIU/GuardianImpact
+C:/Users/tomto/Documents/GitHub/MajorProjectCIU/GuardianImpact
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64779
-Successfully changed project path to: C:/Apps/Unity/Projects/MajorProjectCIU/GuardianImpact
-C:/Apps/Unity/Projects/MajorProjectCIU/GuardianImpact
+59958
+Successfully changed project path to: C:/Users/tomto/Documents/GitHub/MajorProjectCIU/GuardianImpact
+C:/Users/tomto/Documents/GitHub/MajorProjectCIU/GuardianImpact
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 130.83 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 97.91 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.9f1 (108be757e447)
-[Subsystems] Discovering subsystems at path C:/Apps/Unity/Editors/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Apps/Unity/Projects/MajorProjectCIU/GuardianImpact/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/tomto/Documents/GitHub/MajorProjectCIU/GuardianImpact/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f11)
+    Renderer: NVIDIA GeForce RTX 2070 with Max-Q Design (ID=0x1f50)
     Vendor:   
-    VRAM:     5980 MB
-    Driver:   30.0.14.7196
+    VRAM:     8031 MB
+    Driver:   30.0.14.7212
 Initialize mono
-Mono path[0] = 'C:/Apps/Unity/Editors/2020.3.9f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Apps/Unity/Editors/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Apps/Unity/Editors/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56848
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56468
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Apps/Unity/Editors/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001776 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002159 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 83.09 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 78.57 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.411 seconds
+- Completed reload, in  1.128 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.101853 seconds.
+Registered in 0.001575 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 91.74 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 85.80 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.147 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3709 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 189.0 MB.
+System memory in use after: 184.9 MB.
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 4107.
+Total: 4.625600 ms (FindLiveObjects: 0.342700 ms CreateObjectMapping: 0.166200 ms MarkObjects: 1.938900 ms  DeleteObjects: 2.176600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/SampleSceneAssets/TutorialInfo/Readme.asset
+  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleSceneAssets/TutorialInfo/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f138fb88cf5f9a0572e07ff576c1ad79') in 0.043803 seconds
+  Import took 0.048911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.271925 seconds.
+  path: Assets/Scenes/0_SplashScreen_C 1.unity
+  artifactKey: Guid(4c2f3056a8ca9cb4b830dc94f7864b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/0_SplashScreen_C 1.unity using Guid(4c2f3056a8ca9cb4b830dc94f7864b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a64024940119d8e38b2e0470e38518') in 0.010037 seconds
+  Import took 0.016801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001991 seconds.
+  path: Assets/Scenes/0_SplashScreen_C 1.unity
+  artifactKey: Guid(4c2f3056a8ca9cb4b830dc94f7864b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/0_SplashScreen_C 1.unity using Guid(4c2f3056a8ca9cb4b830dc94f7864b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a64024940119d8e38b2e0470e38518') in 0.004205 seconds
+  Import took 0.010340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 62.399164 seconds.
+  path: Assets/Scenes/1_Disclaimer_C.unity
+  artifactKey: Guid(bc13994a6d046b04d9c911cbfe642ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/1_Disclaimer_C.unity using Guid(bc13994a6d046b04d9c911cbfe642ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea40495f9d82c652d7f84932444bba0f') in 0.008159 seconds
+  Import took 0.015553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.992527 seconds.
+  path: Assets/Prefabs/SceneLoader.prefab
+  artifactKey: Guid(da351383830ac4745a9c33f50cd534ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/SceneLoader.prefab using Guid(da351383830ac4745a9c33f50cd534ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d70133f88e60bc6b78e9a349400053') in 0.018608 seconds
+  Import took 0.024453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/Prefabs/Water.prefab
+  artifactKey: Guid(de21242e959596b469c306671db5d658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Water.prefab using Guid(de21242e959596b469c306671db5d658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5b1fb3babab770775b8eddfba86e929') in 0.066092 seconds
+  Import took 0.071036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Prefabs/Terrain.prefab
+  artifactKey: Guid(292591b7c3909a446a1b83c38b632165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Terrain.prefab using Guid(292591b7c3909a446a1b83c38b632165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbbb83a3018dc584251116a74347e73a') in 0.696021 seconds
+  Import took 0.703367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.149987 seconds.
+  path: Assets/HDRPDefaultResources/DefaultHDRISky.exr
+  artifactKey: Guid(54a3a0570aebe8949bec4966f1376581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HDRPDefaultResources/DefaultHDRISky.exr using Guid(54a3a0570aebe8949bec4966f1376581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ace6cd440232f028a7317c8c0001936d') in 0.058189 seconds
+  Import took 0.063634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.048699 seconds.
+  path: Assets/HDRPDefaultResources/DefaultHDRPAsset.asset
+  artifactKey: Guid(e93c35b24eb03c74284e7dc0b755bfcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HDRPDefaultResources/DefaultHDRPAsset.asset using Guid(e93c35b24eb03c74284e7dc0b755bfcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6d8ff7ea3734c3a0864771ca6cc7831') in 0.135194 seconds
+  Import took 0.145708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/HDRPDefaultResources/DefaultVFXResources.asset
+  artifactKey: Guid(145290c901d58b343bdeb3b4362c9ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HDRPDefaultResources/DefaultVFXResources.asset using Guid(145290c901d58b343bdeb3b4362c9ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f16b7ccf70e26775d4bb12e756e1b73d') in 0.044600 seconds
+  Import took 0.049760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/HDRPDefaultResources/DefaultSceneRoot.prefab
+  artifactKey: Guid(2bfa7b9d63fa79e4abdc033f54a868d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HDRPDefaultResources/DefaultSceneRoot.prefab using Guid(2bfa7b9d63fa79e4abdc033f54a868d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d85893f6d7f19aaaaa5d464ece79ace') in 0.024519 seconds
+  Import took 0.029781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/HDRPDefaultResources/DefaultVolumeSettingsProfile.asset
+  artifactKey: Guid(33041a9880c234047b5f8c49347abcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HDRPDefaultResources/DefaultVolumeSettingsProfile.asset using Guid(33041a9880c234047b5f8c49347abcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f22946c2365e3fbe767168dba190dc3c') in 0.005960 seconds
+  Import took 0.010772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.771379 seconds.
+  path: Assets/Materials/Body.mat
+  artifactKey: Guid(a639f371cc56e2948b43bcf9c61a889c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Body.mat using Guid(a639f371cc56e2948b43bcf9c61a889c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90369ec1b8c658304fc69a0cc5da4187') in 0.027404 seconds
+  Import took 0.032985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Materials/Shoes.mat
+  artifactKey: Guid(f36965ad9065b4441b286249578730f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shoes.mat using Guid(f36965ad9065b4441b286249578730f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '465500aed620b5cab883249520bdec55') in 0.011097 seconds
+  Import took 0.016965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000443 seconds.
+  path: Assets/Materials/Top.mat
+  artifactKey: Guid(0b20a936edd29fe49a2ca4122a31bb51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Top.mat using Guid(0b20a936edd29fe49a2ca4122a31bb51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bedc2a1123075ab580e0c24465c11e00') in 0.012736 seconds
+  Import took 0.018706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Materials/Hair.mat
+  artifactKey: Guid(749da0a4b4f25a5479f35fcf1fda6151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Hair.mat using Guid(749da0a4b4f25a5479f35fcf1fda6151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5f494ac67a2bc9c98288688e2534e2') in 0.014460 seconds
+  Import took 0.021117 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Materials/Bottoms.mat
+  artifactKey: Guid(f8f883c73cc6df14aa9e53aa566044c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Bottoms.mat using Guid(f8f883c73cc6df14aa9e53aa566044c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39449caa036743ae5b0acd20b100e841') in 0.013778 seconds
+  Import took 0.019526 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3647 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 187.7 MB.
+System memory in use after: 183.6 MB.
+
+Unloading 65 unused Assets to reduce memory usage. Loaded Objects now: 4154.
+Total: 4.826600 ms (FindLiveObjects: 0.314000 ms CreateObjectMapping: 0.142000 ms MarkObjects: 2.230500 ms  DeleteObjects: 2.138900 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 240 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 142.3 MB.
+System memory in use after: 139.9 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 4372.
+Total: 22.674300 ms (FindLiveObjects: 0.772800 ms CreateObjectMapping: 0.593800 ms MarkObjects: 15.646200 ms  DeleteObjects: 5.659400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 201.091905 seconds.
+  path: Assets/Resources/3rdPerson+Fly/Prefabs/shadow.prefab
+  artifactKey: Guid(99aff40f3c93eea4eaf473f85c4c09c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/3rdPerson+Fly/Prefabs/shadow.prefab using Guid(99aff40f3c93eea4eaf473f85c4c09c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) High Definition Render Pipeline doesn't support Gamma mode, change to Linear mode (HDRP isn't set up properly. Go to Windows > RenderPipeline > HDRP Wizard to fix your settings).
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:SetRenderingFeatures () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:934)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:.ctor (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset,UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:385)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset:CreatePipeline () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipelineAsset.cs:44)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline ()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline (UnityEngine.Rendering.RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+(Filename: C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs Line: 934)
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Shader error in 'Hidden/HDRP/Sky/HDRISky': Couldn't open include file 'Packages/com.unity.render-pipelines.high-definition/Runtime/Sky/SkyUtils.hlsl'. at line 34
+
+Compiling Vertex program with SHADOW_MEDIUM USE_FPTL_LIGHTLIST
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING
+Disabled keywords: DEBUG_DISPLAY SHADOW_LOW SHADOW_HIGH USE_CLUSTERED_LIGHTLIST SKY_MOTION USE_FLOWMAP UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_FULL_HDR UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader warning in 'Hidden/HDRP/Sky/HDRISky': Both vertex and fragment programs must be present in a shader snippet. Excluding it from compilation. at line 364
+
+Compiling Vertex program with SHADOW_MEDIUM USE_FPTL_LIGHTLIST
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING
+Disabled keywords: DEBUG_DISPLAY SHADOW_LOW SHADOW_HIGH USE_CLUSTERED_LIGHTLIST SKY_MOTION USE_FLOWMAP UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_FULL_HDR UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'Hidden/HDRP/Sky/HDRISky': Couldn't open include file 'Packages/com.unity.render-pipelines.high-definition/Runtime/Sky/SkyUtils.hlsl'. at line 34
+
+Compiling Vertex program with SHADOW_MEDIUM USE_FPTL_LIGHTLIST
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING
+Disabled keywords: DEBUG_DISPLAY SHADOW_LOW SHADOW_HIGH USE_CLUSTERED_LIGHTLIST SKY_MOTION USE_FLOWMAP UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_FULL_HDR UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader warning in 'Hidden/HDRP/Sky/HDRISky': Both vertex and fragment programs must be present in a shader snippet. Excluding it from compilation. at line 364
+
+Compiling Vertex program with SHADOW_MEDIUM USE_FPTL_LIGHTLIST
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING
+Disabled keywords: DEBUG_DISPLAY SHADOW_LOW SHADOW_HIGH USE_CLUSTERED_LIGHTLIST SKY_MOTION USE_FLOWMAP UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_FULL_HDR UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'Hidden/HDRP/GGXConvolve': Couldn't open include file 'Packages/com.unity.render-pipelines.high-definition/Runtime/Material/GGXConvolution/GGXConvolution.cs.hlsl'. at line 24
+
+Compiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING
+Disabled keywords: USE_MIS UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_FULL_HDR UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'Hidden/HDRP/GGXConvolve': Couldn't open include file 'Packages/com.unity.render-pipelines.high-definition/Runtime/Material/GGXConvolution/GGXConvolution.cs.hlsl'. at line 24
+
+Compiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING
+Disabled keywords: USE_MIS UNITY_NO_DXT5nm UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_FULL_HDR UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+ -> (artifact id: '333467d4a83d8c648c3c83338fd9d19c') in 1.183913 seconds
+  Import took 1.193162 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001715 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.186 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3624 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 213.3 MB.
+System memory in use after: 210.9 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 4502.
+Total: 4.766400 ms (FindLiveObjects: 0.454200 ms CreateObjectMapping: 0.250400 ms MarkObjects: 2.272200 ms  DeleteObjects: 1.788600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 402.409604 seconds.
+  path: Assets/Resources/3rdPerson+Fly/Animators/CharacterController.controller
+  artifactKey: Guid(1ac2a1891f6a2814dbcb83cbd24d5ee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/3rdPerson+Fly/Animators/CharacterController.controller using Guid(1ac2a1891f6a2814dbcb83cbd24d5ee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c229f9060e184b7e4c288dc284974bda') in 0.106360 seconds
+  Import took 0.113521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.752909 seconds.
+  path: Assets/Resources/3rdPerson+Fly/Animations/Idle/Idle.anim
+  artifactKey: Guid(471152417041a2940a4295d01794f152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/3rdPerson+Fly/Animations/Idle/Idle.anim using Guid(471152417041a2940a4295d01794f152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ba6f2100e4aca5d4a05115c0dc8f11') in 0.035223 seconds
+  Import took 0.041850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.670400 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Attacks.FBX
+  artifactKey: Guid(176fac875603d3f419eb970f987aeab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Attacks.FBX using Guid(176fac875603d3f419eb970f987aeab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '617e31be9dc7e6014607f4d2f1bbd599') in 0.069135 seconds
+  Import took 0.074857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Die.FBX
+  artifactKey: Guid(fa48ae6d3a4854443898a58add5074ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Die.FBX using Guid(fa48ae6d3a4854443898a58add5074ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce8a593b18924acdb8b5607c43a18c44') in 0.008961 seconds
+  Import took 0.014963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Jump.FBX
+  artifactKey: Guid(238163f950175d845b03cb6dac0c6e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Jump.FBX using Guid(238163f950175d845b03cb6dac0c6e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '934582853fbf7f81bea598a08adcadfe') in 0.009555 seconds
+  Import took 0.016041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000424 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Damage.FBX
+  artifactKey: Guid(23fd8c182a6515648baa9d0a89922e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Damage.FBX using Guid(23fd8c182a6515648baa9d0a89922e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da74011d532cacec2d668f8b21afe57c') in 0.010221 seconds
+  Import took 0.016953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Roll.FBX
+  artifactKey: Guid(68d04a7b9dcc0fd4b877df82f02d1d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Roll.FBX using Guid(68d04a7b9dcc0fd4b877df82f02d1d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a66465d1f5784ad86bec6daf8d54ab') in 0.009117 seconds
+  Import took 0.015390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Stance.FBX
+  artifactKey: Guid(8a646e73f32d5ab46be5ca7d3ebb4f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Stance.FBX using Guid(8a646e73f32d5ab46be5ca7d3ebb4f3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c140a8ca25461d637032deb86f985c35') in 0.011354 seconds
+  Import took 0.017336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Damage.FBX
+  artifactKey: Guid(1b31cb902429704429a2c2584363dd59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Damage.FBX using Guid(1b31cb902429704429a2c2584363dd59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '232eaaf28b792a6fc99f6478a73c2a5d') in 0.009263 seconds
+  Import took 0.016246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Sprint.FBX
+  artifactKey: Guid(92e13e67a26415646a752312d3ac0230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Sprint.FBX using Guid(92e13e67a26415646a752312d3ac0230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21f27b74afb05e3480c329c1e9f855e4') in 0.008702 seconds
+  Import took 0.015179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Die.FBX
+  artifactKey: Guid(1b89fcc283287844b8d68f9e0cc329cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Die.FBX using Guid(1b89fcc283287844b8d68f9e0cc329cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a320f8f44ed5320a29c4d7f524c07bdd') in 0.011129 seconds
+  Import took 0.017705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Walk.FBX
+  artifactKey: Guid(0f5f811a33031524680b227a45dc9848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Walk.FBX using Guid(0f5f811a33031524680b227a45dc9848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c21ab092c42eca5927a0d57f2ccf3890') in 0.009118 seconds
+  Import took 0.016501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Block.FBX
+  artifactKey: Guid(fe09d69bd98991f4d84f6c67e4e3492c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Block.FBX using Guid(fe09d69bd98991f4d84f6c67e4e3492c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '642da7c37c480993020a95787c58126b') in 0.011386 seconds
+  Import took 0.018740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sprint.FBX
+  artifactKey: Guid(7e9d3ca0c95bb8749ab91f3a407bea2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sprint.FBX using Guid(7e9d3ca0c95bb8749ab91f3a407bea2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96eb8b5f377ad846debf95493befe699') in 0.010434 seconds
+  Import took 0.016690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Idle.FBX
+  artifactKey: Guid(f03b4671842f14f4b98bfc645df0e1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Idle.FBX using Guid(f03b4671842f14f4b98bfc645df0e1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1697d99f27cd86cef6c049e03660b50') in 0.010349 seconds
+  Import took 0.015529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Roll.FBX
+  artifactKey: Guid(512db7c09f1ecd24aa783375a03e5964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Sword_Roll.FBX using Guid(512db7c09f1ecd24aa783375a03e5964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9888ada49bda9d19f3d21a1b9fecb22f') in 0.010121 seconds
+  Import took 0.016789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000361 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Walk.FBX
+  artifactKey: Guid(00ed1997eb74a40498b28747b3fdb59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Walk.FBX using Guid(00ed1997eb74a40498b28747b3fdb59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f59a1406f5b350b09d47286dc97097d') in 0.009747 seconds
+  Import took 0.017920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Attacks.FBX
+  artifactKey: Guid(176fac875603d3f419eb970f987aeab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Animations/Male_Animation@Male_Attacks.FBX using Guid(176fac875603d3f419eb970f987aeab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '617e31be9dc7e6014607f4d2f1bbd599') in 0.007521 seconds
+  Import took 0.016552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.606109 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Male_Animation_Skeleton_Default.controller
+  artifactKey: Guid(d7c55390ab0320c47b84f63184ecb1b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Animation Skeleton/Male_Animation_Skeleton_Default.controller using Guid(d7c55390ab0320c47b84f63184ecb1b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e18b00c8213f08d4761be203b78834') in 0.020349 seconds
+  Import took 0.027060 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002117 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.155 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 213.4 MB.
+System memory in use after: 211.0 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 4505.
+Total: 5.319900 ms (FindLiveObjects: 0.327000 ms CreateObjectMapping: 0.163300 ms MarkObjects: 2.987000 ms  DeleteObjects: 1.841800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 119.381025 seconds.
+  path: Assets/Resources/3rdPerson+Fly/Animators/CharacterController.controller
+  artifactKey: Guid(1ac2a1891f6a2814dbcb83cbd24d5ee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/3rdPerson+Fly/Animators/CharacterController.controller using Guid(1ac2a1891f6a2814dbcb83cbd24d5ee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab8a077e9b31be2a46e2452bef97216') in 0.088462 seconds
+  Import took 0.095013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.622027 seconds.
+  path: Assets/Resources/3rdPerson+Fly/Animations/Locomotion/walk_fwd.anim
+  artifactKey: Guid(ebb08566d36984f458cd0a7adfc9f953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/3rdPerson+Fly/Animations/Locomotion/walk_fwd.anim using Guid(ebb08566d36984f458cd0a7adfc9f953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a32faebed4c203edb2109282509d8d') in 0.015312 seconds
+  Import took 0.021671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.274316 seconds.
+  path: Assets/Resources/3rdPerson+Fly/Animations/Locomotion/run_fwd.anim
+  artifactKey: Guid(fe763b5e709308f4085e998069974f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/3rdPerson+Fly/Animations/Locomotion/run_fwd.anim using Guid(fe763b5e709308f4085e998069974f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5575e5eb7bcd1fe2d6606da0a1b400bd') in 0.012729 seconds
+  Import took 0.018529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.155752 seconds.
+  path: Assets/Resources/3rdPerson+Fly/Animations/Locomotion/sprint_fwd.anim
+  artifactKey: Guid(b283eb77c9cc3ff4793335e8c9cd0940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/3rdPerson+Fly/Animations/Locomotion/sprint_fwd.anim using Guid(b283eb77c9cc3ff4793335e8c9cd0940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d3e3301b4f09f57a5ed92eb2e15369c') in 0.011652 seconds
+  Import took 0.017514 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001595 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.080 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 213.4 MB.
+System memory in use after: 211.0 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 4508.
+Total: 10.772500 ms (FindLiveObjects: 0.702200 ms CreateObjectMapping: 0.551400 ms MarkObjects: 5.736400 ms  DeleteObjects: 3.780800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002137 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.446 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.10 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 213.4 MB.
+System memory in use after: 211.0 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 4511.
+Total: 8.632600 ms (FindLiveObjects: 0.535200 ms CreateObjectMapping: 0.379700 ms MarkObjects: 3.930900 ms  DeleteObjects: 3.784800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002341 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.172 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 213.4 MB.
+System memory in use after: 211.0 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 4514.
+Total: 4.757100 ms (FindLiveObjects: 0.327900 ms CreateObjectMapping: 0.180300 ms MarkObjects: 2.309900 ms  DeleteObjects: 1.938400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 526.559232 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Legs/Base Legs/Male_Base_Legs.FBX
+  artifactKey: Guid(17e8ecbc4e6bcea40878ead9b50712be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Legs/Base Legs/Male_Base_Legs.FBX using Guid(17e8ecbc4e6bcea40878ead9b50712be) Importer(815301076,1909f56bfc062723c751e8b465ee728b) High Definition Render Pipeline doesn't support Gamma mode, change to Linear mode (HDRP isn't set up properly. Go to Windows > RenderPipeline > HDRP Wizard to fix your settings).
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:SetRenderingFeatures () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:934)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:.ctor (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset,UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:385)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset:CreatePipeline () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipelineAsset.cs:44)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline ()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline (UnityEngine.Rendering.RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+(Filename: C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs Line: 934)
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+ -> (artifact id: '785b90535878202b7c3fd22f88901d31') in 0.939018 seconds
+  Import took 0.946678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000543 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Legs/Base Legs/Male_Base_Legs.FBX
+  artifactKey: Guid(17e8ecbc4e6bcea40878ead9b50712be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Legs/Base Legs/Male_Base_Legs.FBX using Guid(17e8ecbc4e6bcea40878ead9b50712be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785b90535878202b7c3fd22f88901d31') in 0.052099 seconds
+  Import took 0.059445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.669069 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_1/Male_Legs_1.FBX
+  artifactKey: Guid(d7739944e3990de4bbb0cfdc16f876fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_1/Male_Legs_1.FBX using Guid(d7739944e3990de4bbb0cfdc16f876fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f6ee11ba439a26136bff56a4a96d479') in 0.055413 seconds
+  Import took 0.062648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002039 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_1/Male_Legs_1.FBX
+  artifactKey: Guid(d7739944e3990de4bbb0cfdc16f876fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_1/Male_Legs_1.FBX using Guid(d7739944e3990de4bbb0cfdc16f876fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f6ee11ba439a26136bff56a4a96d479') in 0.049923 seconds
+  Import took 0.058400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.753265 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_2/Male_Legs_2.FBX
+  artifactKey: Guid(a48c0a1c97d48e7419d41fe8e176ae51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_2/Male_Legs_2.FBX using Guid(a48c0a1c97d48e7419d41fe8e176ae51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c23737f9fb38c5d811ad69a1943d2698') in 0.056021 seconds
+  Import took 0.064042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004556 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_2/Male_Legs_2.FBX
+  artifactKey: Guid(a48c0a1c97d48e7419d41fe8e176ae51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_2/Male_Legs_2.FBX using Guid(a48c0a1c97d48e7419d41fe8e176ae51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c23737f9fb38c5d811ad69a1943d2698') in 0.051004 seconds
+  Import took 0.060644 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.621174 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_3/Male_Legs_3.FBX
+  artifactKey: Guid(a21dffdbb678b38439d8c5954c371701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_3/Male_Legs_3.FBX using Guid(a21dffdbb678b38439d8c5954c371701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b206a0c772560f1221475b3ad244ea33') in 0.067555 seconds
+  Import took 0.075208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001761 seconds.
+  path: Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_3/Male_Legs_3.FBX
+  artifactKey: Guid(a21dffdbb678b38439d8c5954c371701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cartoon Heroes/Male/3D/Legs/Legs_3/Male_Legs_3.FBX using Guid(a21dffdbb678b38439d8c5954c371701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b206a0c772560f1221475b3ad244ea33') in 0.063472 seconds
+  Import took 0.071182 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001543 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.133 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.0 MB.
+System memory in use after: 211.6 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 4621.
+Total: 5.153800 ms (FindLiveObjects: 0.334800 ms CreateObjectMapping: 0.146800 ms MarkObjects: 2.690800 ms  DeleteObjects: 1.980800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 81.069943 seconds.
+  path: Assets/Prefabs/PlayerController.prefab
+  artifactKey: Guid(beb61accd8fa25f40a53543f7db64435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerController.prefab using Guid(beb61accd8fa25f40a53543f7db64435) Importer(815301076,1909f56bfc062723c751e8b465ee728b) High Definition Render Pipeline doesn't support Gamma mode, change to Linear mode (HDRP isn't set up properly. Go to Windows > RenderPipeline > HDRP Wizard to fix your settings).
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:SetRenderingFeatures () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:934)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:.ctor (UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset,UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:385)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset:CreatePipeline () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipelineAsset.cs:44)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline ()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline (UnityEngine.Rendering.RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+(Filename: C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs Line: 934)
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+Requested RenderTexture with sRGB format. sRGB formats are not supported in gamma mode, fallback to a UNorm format. Use a UNorm format instead of sRGB to silence this warning.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.RTHandleSystem:AllocAutoSizedRenderTexture (int,int,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:805)
+UnityEngine.Rendering.RTHandleSystem:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs:598)
+UnityEngine.Rendering.RTHandles:Alloc (UnityEngine.Vector2,int,UnityEngine.Rendering.DepthBits,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.FilterMode,UnityEngine.TextureWrapMode,UnityEngine.Rendering.TextureDimension,bool,bool,bool,bool,int,single,bool,bool,bool,UnityEngine.RenderTextureMemoryless,string) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandles.cs:136)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:CreateAndClearTexture (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraphResourceRegistry.cs:398)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:PreRenderPassExecute (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1186)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteCompiledPass (UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph/CompiledPassInfo&,int) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1109)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:ExecuteRenderGraph () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:1129)
+UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph:Execute () (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/RenderGraph/RenderGraph.cs:547)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteWithRenderGraph (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.HighDefinition.AOVRequestData,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,System.Collections.Generic.List`1<UnityEngine.Rendering.RTHandle>,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.RenderGraph.cs:340)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:ExecuteRenderRequest (UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RenderRequest,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.AOVRequestData) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2518)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.high-definition@10.5.0/Runtime/RenderPipeline/HDRenderPipeline.cs:2274)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/tomto/Documents/GitHub/GuardianImpact/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Runtime/Textures/RTHandleSystem.cs line 805]
+
+ -> (artifact id: '0dd8a48ae78a30905db391b78f9a30cb') in 0.800663 seconds
+  Import took 0.810489 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001577 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.123 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.4 MB.
+System memory in use after: 212.1 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 4725.
+Total: 5.069300 ms (FindLiveObjects: 0.320400 ms CreateObjectMapping: 0.170500 ms MarkObjects: 2.631500 ms  DeleteObjects: 1.946100 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
