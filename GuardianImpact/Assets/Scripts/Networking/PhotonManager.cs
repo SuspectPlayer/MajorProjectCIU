@@ -122,10 +122,16 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         PanelMessagesManager.master.InstantiateMessage($"Connected to the server!", PanelMessageColor.regularSuccessTextColor);
         matchmakingButton.gameObject.SetActive(true); matchmakingButton.interactable = true;
         cancelMatchmakingButton.gameObject.SetActive(false);
+
+        if (CharacterSelector.master != null) CharacterSelector.master.SetMaleCharacter();
     }
     #endregion Photon override functions
 
     #region Other functions
+    public bool IsConnectedToServer()
+    {
+        return PhotonNetwork.IsConnected;
+    }
     /// <summary>
     /// Called from Playfab Manager
     /// </summary>

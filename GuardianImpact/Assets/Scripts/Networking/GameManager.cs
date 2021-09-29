@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviourPunCallbacks
             playerPrefabIndex = (int)thisPlayerHash["i"];
         }
         else playerPrefabIndex = 0;
+        Debug.Log($"Player index is {playerPrefabIndex}.");
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         string thePath = Path.Combine(path, playerPrefabs[playerPrefabIndex]);
 

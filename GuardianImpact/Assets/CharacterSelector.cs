@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class CharacterSelector : MonoBehaviour
+public class CharacterSelector : MonoBehaviourPun
 {
     public GameObject MaleCamera;
     public GameObject FemaleCamera;
+    public static CharacterSelector master;
 
+    private void Awake()
+    {
+        if (master != null) Destroy(this);
+        master = this;
+    }
     private void Start()
     {
         if (FemaleCamera)
@@ -14,9 +21,25 @@ public class CharacterSelector : MonoBehaviour
             FemaleCamera.SetActive(false);
         }
     }
+    public void SetMaleCharacter()
+    {
+        ExitGames.Client.Photon.Hashtable newHash = new ExitGames.Client.Photon.Hashtable();
+        newHash.Add("i", 0);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(newHash);
+        FemaleCamera.SetActive(false);
+        Debug.Log("Male character selected.");
+    }
+    public void SetFemaleCharacter()
+    {
+        ExitGames.Client.Photon.Hashtable newHash = new ExitGames.Client.Photon.Hashtable();
+        newHash.Add("i", 1);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(newHash);
+        FemaleCamera.SetActive(true);
+        Debug.Log("Female character selected.");
+    }
     private void Update()
     {
-
+        if (!PhotonManager.master.IsConnectedToServer()) return;
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -25,13 +48,13 @@ public class CharacterSelector : MonoBehaviour
             {
                 if(hit.transform.name == "MaleBox")
                 {
-                    FemaleCamera.SetActive(false);
+                    SetMaleCharacter();
                 }
                 if(hit.transform.name == "FemaleBox")
                 {
-                    FemaleCamera.SetActive(true);
+                    SetFemaleCharacter();
                 }
-                Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
+                //Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
                 
            }
         }
