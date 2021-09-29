@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class PlayerSync : MonoBehaviourPun, IPunObservable
 {
+    
     [SerializeField] bool syncPosition = true;
     [SerializeField] bool syncRotation = false;
     [SerializeField] bool useSmoothing = true;
@@ -41,8 +42,8 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
             if (syncAnimator)
             {
                 stream.SendNext(animator.GetFloat("Speed"));
-                stream.SendNext(animator.GetFloat("H"));
-                stream.SendNext(animator.GetFloat("V"));
+                /*stream.SendNext(animator.GetFloat("H"));
+                stream.SendNext(animator.GetFloat("V"));*/
                 
                 stream.SendNext(animator.GetBool("Jump"));
                 stream.SendNext(animator.GetBool("Fly"));
@@ -66,8 +67,8 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
             if (syncAnimator)
             {
                 animator.SetFloat("Speed", (float)stream.ReceiveNext());
-                animator.SetFloat("H", (float)stream.ReceiveNext());
-                animator.SetFloat("V", (float)stream.ReceiveNext());
+                /*animator.SetFloat("H", (float)stream.ReceiveNext());
+                animator.SetFloat("V", (float)stream.ReceiveNext());*/
 
                 animator.SetBool("Jump", (bool) stream.ReceiveNext());
                 animator.SetBool("Fly", (bool) stream.ReceiveNext());

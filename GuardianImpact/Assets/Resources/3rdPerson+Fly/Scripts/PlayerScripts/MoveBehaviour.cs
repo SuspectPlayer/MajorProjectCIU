@@ -128,7 +128,7 @@ public class MoveBehaviour : GenericBehaviour
 			speed = sprintSpeed;
 		}
 
-		behaviourManager.GetAnim.SetFloat(speedFloat, speed, speedDampTime, Time.deltaTime);
+		behaviourManager.GetAnim.SetFloat(speedFloat, speed, speedDampTime, Time.fixedDeltaTime);
 	}
 
 	// Remove vertical rigidbody velocity.
