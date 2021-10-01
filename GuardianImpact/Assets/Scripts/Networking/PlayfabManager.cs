@@ -16,6 +16,9 @@ public class PlayfabManager : MonoBehaviour
     [SerializeField] Button loginButton;
     [SerializeField] Button registerButton;
 
+    string thisUserID = string.Empty;
+    string thisUsername = string.Empty;
+
     bool isLoggedIn;
 
     #region Monobehavior methods
@@ -95,8 +98,32 @@ public class PlayfabManager : MonoBehaviour
             PlayFabClientAPI.ForgetAllCredentials();
             LoggedInSettings(IsLoggedIn());
             PanelMessagesManager.master.InstantiateMessage("Logged out!", PanelMessageColor.neutralColor);
+            thisUserID = string.Empty;
         }
     }
+    public void ReturnUsername()
+    {
+       GetUsername(thisUserID);
+    }
+    void GetUsername(string playFabId)
+    {
+        PlayFabClientAPI.GetPlayerProfile(new GetPlayerProfileRequest()
+        {
+            PlayFabId = playFabId,
+            ProfileConstraints = new PlayerProfileViewConstraints()
+            {
+                ShowDisplayName = true
+            }
+        },
+        result => {
+            PhotonManager.master.SaveUsername(result.PlayerProfile.DisplayName);
+        },
+        error => {
+            PhotonManager.master.SaveUsername(string.Empty);
+        });
+    }
+
+    
     #endregion Other funcitons
     #region Button funcitons
     public void LoginButton()
@@ -112,9 +139,11 @@ public class PlayfabManager : MonoBehaviour
     public void RegisterButton()
     {
         if (IsLoggedIn()) return;
+
         var request = new RegisterPlayFabUserRequest
         {
             Username = username.text,
+            DisplayName = username.text,
             Password = password.text,
             RequireBothUsernameAndEmail = false,
 
@@ -131,6 +160,7 @@ public class PlayfabManager : MonoBehaviour
     {
         PanelMessagesManager.master.InstantiateMessage($"Logged in!", PanelMessageColor.regularSuccessTextColor);
         LoggedInSettings(true);
+        thisUserID = obj.PlayFabId;
     }
     /// <summary>
     /// Called when a Playfab register-user request is successful
@@ -139,9 +169,12 @@ public class PlayfabManager : MonoBehaviour
     private void OnRegisterSuccess(RegisterPlayFabUserResult obj)
     {
         PanelMessagesManager.master.InstantiateMessage($"Created an account for : {obj.Username}!", PanelMessageColor.regularSuccessTextColor);
-        username.text = string.Empty;
-        password.text = string.Empty;
-        username.ActivateInputField();
+        //username.text = string.Empty;
+        //password.text = string.Empty;
+        //username.ActivateInputField();
+
+        LoggedInSettings(true);
+        thisUserID = obj.PlayFabId;
     }
     /// <summary>
     /// Called when a Playfab user request returns an error
@@ -163,6 +196,7 @@ public class PlayfabManager : MonoBehaviour
                 PanelMessagesManager.master.InstantiateMessage($"*{KVP.Value[i]}", PanelMessageColor.regularFailTextColor);
             }
         }
+        thisUsername = string.Empty;
     }
     #endregion Playfab callbacks
 }

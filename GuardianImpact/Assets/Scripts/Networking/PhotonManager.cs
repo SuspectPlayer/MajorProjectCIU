@@ -19,6 +19,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     [SerializeField] byte maxPlayers = 8;
     [SerializeField] int waitingServerIndex = 4;
 
+    GameObject acrossScenesObject;
+
 
     #region Monobehavior methods
     // Start is called before the first frame update
@@ -83,6 +85,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
             matchmakingButton.gameObject.SetActive(false);
             cancelMatchmakingButton.gameObject.SetActive(true);
             UpdatePlayersInRoom();
+            acrossScenesObject = PhotonNetwork.Instantiate("AcrossScenesObject", Vector3.zero, Quaternion.identity, 0);
         }
     }
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -115,6 +118,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         cancelMatchmakingButton.gameObject.SetActive(false);
         PlayfabManager.master.ForceLogOutPlayfab();
 
+        SaveUsername(string.Empty);
+
     }
     public override void OnConnectedToMaster()
     {
@@ -124,6 +129,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         cancelMatchmakingButton.gameObject.SetActive(false);
 
         if (CharacterSelector.master != null) CharacterSelector.master.SetMaleCharacter();
+
+        PlayfabManager.master.ReturnUsername();
     }
     #endregion Photon override functions
 
@@ -170,6 +177,13 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         matchmakingButton.gameObject.SetActive(false);
         cancelMatchmakingButton.gameObject.SetActive(false);
     }
+    public void SaveUsername(string name)
+    {
+        ExitGames.Client.Photon.Hashtable newHash = new ExitGames.Client.Photon.Hashtable();
+        newHash.Add("u", name);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(newHash);
+        Debug.Log($"Username : '{name}' is saved.");
+    }
     #endregion Other functions
     #region Button functions
     public void LookForPlayers()
@@ -195,6 +209,10 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     public void JoinWaitingServer()
     {
         if (!PhotonNetwork.InRoom) return;
+        if (!forceJoinWaitingServer)
+        {
+            PhotonNetwork.IsMessageQueueRunning = false;
+        }
         PhotonNetwork.LoadLevel(waitingServerIndex);
     }
     #endregion Button functions

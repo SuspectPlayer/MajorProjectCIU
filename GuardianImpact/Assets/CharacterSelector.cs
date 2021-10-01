@@ -27,7 +27,6 @@ public class CharacterSelector : MonoBehaviourPun
         newHash.Add("i", 0);
         PhotonNetwork.LocalPlayer.SetCustomProperties(newHash);
         FemaleCamera.SetActive(false);
-        Debug.Log("Male character selected.");
     }
     public void SetFemaleCharacter()
     {
@@ -35,7 +34,6 @@ public class CharacterSelector : MonoBehaviourPun
         newHash.Add("i", 1);
         PhotonNetwork.LocalPlayer.SetCustomProperties(newHash);
         FemaleCamera.SetActive(true);
-        Debug.Log("Female character selected.");
     }
     private void Update()
     {

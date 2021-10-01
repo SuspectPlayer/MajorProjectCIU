@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        PhotonNetwork.IsMessageQueueRunning = true;
         SpawnPlayer();
     }
     void SpawnPlayer()
@@ -25,6 +26,10 @@ public class GameManager : MonoBehaviourPunCallbacks
         if (thisPlayerHash.ContainsKey("i"))
         {
             playerPrefabIndex = (int)thisPlayerHash["i"];
+        }
+        if(thisPlayerHash.ContainsKey("u"))
+        {
+            Debug.Log($"The players stored username is {(string)thisPlayerHash["u"]}");
         }
         else playerPrefabIndex = 0;
         Debug.Log($"Player index is {playerPrefabIndex}.");
