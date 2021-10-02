@@ -59,5 +59,6 @@ public class PanelMessagesManager : MonoBehaviour
         }
 
         newMessage.transform.GetComponent<TextMeshProUGUI>().color = textColor;
+        if (AudioManager.master != null) AudioManager.master.MessageReceivedSound();
     }
 }
