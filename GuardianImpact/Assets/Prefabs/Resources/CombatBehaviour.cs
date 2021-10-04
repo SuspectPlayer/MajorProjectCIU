@@ -5,7 +5,6 @@ using UnityEngine;
 public class CombatBehaviour : GenericBehaviour
 {
     private int attackBool;
-    public bool focusAttack = false;
     public bool attacking = false;
 
     // Start is called before the first frame update
@@ -17,22 +16,16 @@ public class CombatBehaviour : GenericBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (behaviourManager.IsGrounded())
         {
-            attacking = true;
-            behaviourManager.GetAnim.SetTrigger(attackBool);
-            Debug.Log("Hey");
-        }
-
-        if (attacking)
-        {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
-                focusAttack = true;
-            }
-            else
-            {
-                focusAttack = false;
+                if (!attacking)
+                {
+                    attacking = true;
+                    behaviourManager.GetAnim.SetTrigger(attackBool);
+                    Debug.Log("Hey");
+                }
             }
         }
     }

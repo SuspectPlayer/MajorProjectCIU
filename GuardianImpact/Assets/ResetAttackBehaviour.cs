@@ -13,15 +13,18 @@ public class ResetAttackBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<CombatBehaviour>().attacking = false;
         animator.SetTrigger("ResetAttack");
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.GetComponent<CombatBehaviour>().attacking = false;
+        // this is still bad, need to change
+        animator.ResetTrigger("FocusCharge");
+        animator.ResetTrigger("ResetAttack");
+        animator.ResetTrigger("NormalAttack");
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -15,16 +15,15 @@ public class FirstTransition : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (combatBehaviour.focusAttack)
+        if (Input.GetMouseButtonUp(0))
         {
-            animator.SetTrigger("FocusCharge");
+            animator.SetTrigger("NormalAttack");
+            animator.ResetTrigger("FocusCharge");
         }
         else
         {
-            animator.SetTrigger("NormalAttack");
+            animator.SetTrigger("FocusCharge");
         }
-
-        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
