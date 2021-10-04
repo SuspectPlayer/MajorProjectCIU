@@ -337,8 +337,8 @@ public class BasicBehaviour : MonoBehaviourPun
 // Contains references to local components that may differ according to the behaviour itself.
 public abstract class GenericBehaviour : MonoBehaviourPun
 {
-	//protected Animator anim;                       // Reference to the Animator component.
-	protected int speedFloat;                      // Speed parameter on the Animator.
+    //protected Animator anim;                       // Reference to the Animator component.
+    protected int speedFloat;                      // Speed parameter on the Animator.
 	protected BasicBehaviour behaviourManager;     // Reference to the basic behaviour manager.
 	protected int behaviourCode;                   // The code that identifies a behaviour.
 	protected bool canSprint;                      // Boolean to store if the behaviour allows the player to sprint.
