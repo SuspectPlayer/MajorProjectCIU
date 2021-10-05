@@ -18,7 +18,7 @@ public class FirstTransition : StateMachineBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             animator.SetTrigger("NormalAttack");
-            animator.ResetTrigger("FocusCharge");
+            //animator.ResetTrigger("FocusCharge");
         }
         else
         {

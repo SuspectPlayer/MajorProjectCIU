@@ -24,7 +24,6 @@ public class CombatBehaviour : GenericBehaviour
                 {
                     attacking = true;
                     behaviourManager.GetAnim.SetTrigger(attackBool);
-                    Debug.Log("Hey");
                 }
             }
         }
