@@ -12,6 +12,7 @@ public class PlayfabManager : MonoBehaviour
     public static PlayfabManager master;
     [SerializeField] TMP_InputField username;
     [SerializeField] TMP_InputField password;
+    [SerializeField] Toggle rememberUser;
 
     [SerializeField] Button loginButton;
     [SerializeField] Button registerButton;
@@ -29,7 +30,16 @@ public class PlayfabManager : MonoBehaviour
     }
     private void Start()
     {
-        LoggedInSettings(IsLoggedIn());
+        LoggedInSettings(false);
+        rememberUser.onValueChanged = new Toggle.ToggleEvent();
+        if (PlayerPrefs.HasKey("username"))
+        {
+            rememberUser.isOn = true;
+            username.text = PlayerPrefs.GetString("username");
+            password.text = PlayerPrefs.GetString("password");
+            LoginButton();
+        }
+        rememberUser.onValueChanged.AddListener(SaveUserToggle);
     }
     private void Update()
     {
@@ -76,6 +86,8 @@ public class PlayfabManager : MonoBehaviour
     void LoggedInSettings(bool loggedIn)
     {
         isLoggedIn = loggedIn;
+
+        if (loggedIn && rememberUser.isOn) SaveUser();
 
         username.interactable = !loggedIn;
         password.interactable = !loggedIn;
@@ -126,6 +138,21 @@ public class PlayfabManager : MonoBehaviour
     
     #endregion Other funcitons
     #region Button funcitons
+    public void SaveUserToggle(bool on)
+    {
+        if (on && PlayFabClientAPI.IsClientLoggedIn()) SaveUser();
+        else DeleteUser();
+    }
+    void SaveUser()
+    {
+        PlayerPrefs.SetString("username", username.text);
+        PlayerPrefs.SetString("password", password.text);
+    }
+    void DeleteUser()
+    {
+        PlayerPrefs.DeleteKey("username");
+        PlayerPrefs.DeleteKey("password");
+    }
     public void LoginButton()
     {
         if (IsLoggedIn()) return;
