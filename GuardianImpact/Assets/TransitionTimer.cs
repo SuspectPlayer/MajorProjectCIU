@@ -2,26 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstTransition : StateMachineBehaviour
+public class TransitionTimer : StateMachineBehaviour
 {
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
+    //    
     //}
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (!Input.GetMouseButton(0) && animator.GetComponent<BasicBehaviour>().photonView.IsMine)
+        if (Input.GetMouseButtonDown(0) && animator.GetComponent<BasicBehaviour>().photonView.IsMine)
         {
             animator.SetTrigger("NormalAttack");
-            //animator.ResetTrigger("FocusCharge");
         }
-        /*else
-        {
-            animator.SetTrigger("FocusCharge");
-        }*/
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

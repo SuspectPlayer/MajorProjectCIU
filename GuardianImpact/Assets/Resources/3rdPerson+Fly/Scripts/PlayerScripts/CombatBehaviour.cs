@@ -18,7 +18,7 @@ public class CombatBehaviour : GenericBehaviour
     {
         if (behaviourManager.IsGrounded())
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && (photonView.IsMine || behaviourManager.offlineMode))
             {
                 if (!attacking)
                 {
