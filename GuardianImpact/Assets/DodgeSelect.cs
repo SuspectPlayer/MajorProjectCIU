@@ -2,19 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FocusCharge : StateMachineBehaviour
+public class DodgeSelect : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.SetBool("Attacking", true);
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Input.GetMouseButtonUp(0) && animator.GetComponent<BasicBehaviour>().photonView.IsMine)
+        if (Input.GetKey(KeyCode.W))
         {
-            animator.SetTrigger("FocusAttack");
+            animator.SetBool("W",true);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("A", true);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("S", true);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("D", true);
+        }
+        else
+        {
+            Debug.Log("No Direction Pressed");
         }
     }
 
