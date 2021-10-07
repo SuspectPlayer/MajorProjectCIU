@@ -15,23 +15,28 @@ public class DodgeSelect : StateMachineBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            animator.SetBool("W",true);
+            BasicBehaviour BB = animator.GetComponent<BasicBehaviour>();
+            if (BB.offlineMode || BB.photonView.IsMine) animator.SetBool("W",true);
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            animator.SetBool("A", true);
+            BasicBehaviour BB = animator.GetComponent<BasicBehaviour>();
+            if (BB.offlineMode || BB.photonView.IsMine) animator.SetBool("A", true);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            animator.SetBool("S", true);
+            BasicBehaviour BB = animator.GetComponent<BasicBehaviour>();
+            if (BB.offlineMode || BB.photonView.IsMine) animator.SetBool("S", true);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            animator.SetBool("D", true);
+            BasicBehaviour BB = animator.GetComponent<BasicBehaviour>();
+            if (BB.offlineMode || BB.photonView.IsMine) animator.SetBool("D", true);
         }
         else
         {
-            Debug.Log("No Direction Pressed");
+            BasicBehaviour BB = animator.GetComponent<BasicBehaviour>();
+            if (BB.offlineMode || BB.photonView.IsMine) Debug.Log("No Direction Pressed");
         }
     }
 

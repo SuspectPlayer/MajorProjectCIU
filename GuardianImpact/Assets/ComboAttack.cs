@@ -15,7 +15,8 @@ public class ComboAttack : StateMachineBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            animator.SetBool("Attack", true);
+            BasicBehaviour BB = animator.GetComponent<BasicBehaviour>();
+            if(BB.offlineMode || BB.photonView.IsMine) animator.SetBool("Attack", true);
         }
     }
 

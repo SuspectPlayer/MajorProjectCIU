@@ -16,7 +16,7 @@ public class CombatBehaviour : GenericBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && (behaviourManager.offlineMode || photonView.IsMine))
         {
             animator.Play("Base Layer.Dodge");
             Debug.Log("DODGED");
@@ -24,7 +24,7 @@ public class CombatBehaviour : GenericBehaviour
         // Read mouse input and send whether player pressed or held the attack button
         if (!animator.GetBool("Attacking"))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && (behaviourManager.offlineMode || photonView.IsMine))
             {
                 isPressed = true;
                 Debug.Log("Holding Mouse 1" + mouseTimer);
@@ -35,7 +35,7 @@ public class CombatBehaviour : GenericBehaviour
                 animator.Play("Base Layer.Charge");
             }
 
-            if (Input.GetMouseButtonUp(0) && !animator.GetBool("Attacking"))
+            if (Input.GetMouseButtonUp(0) && !animator.GetBool("Attacking") && (behaviourManager.offlineMode || photonView.IsMine))
             {
                 if (mouseTimer < 1f)
                 {
@@ -78,7 +78,7 @@ public class CombatBehaviour : GenericBehaviour
                 
                 
             }
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && (behaviourManager.offlineMode || photonView.IsMine))
             {
                 animator.Play("Base Layer.Counter");
                 animator.SetBool("Attacking", true);

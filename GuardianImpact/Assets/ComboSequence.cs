@@ -2,24 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetCombat : StateMachineBehaviour
+[System.Serializable]
+public enum AttackSequence
 {
+    none,
+    first,
+    second,
+    third
+}
+public class ComboSequence : StateMachineBehaviour
+{
+    [SerializeField] AttackSequence sequenceOrder;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
 
+        animator.GetComponent<PlayerSync>().SetAttackSequence(sequenceOrder);
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        animator.SetBool("Attack", false);
-        animator.SetBool("Charge", false);
-        animator.SetBool("Level1", false);
-        animator.SetBool("Level2", false);
-        animator.SetBool("Level3", false);
-        animator.SetBool("Attacking", false);
-        animator.GetComponent<PlayerSync>().SetAttackSequence(AttackSequence.none);
-
-    }
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
