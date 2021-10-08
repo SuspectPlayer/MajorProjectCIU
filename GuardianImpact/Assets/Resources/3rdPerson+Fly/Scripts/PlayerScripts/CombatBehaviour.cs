@@ -7,7 +7,6 @@ public class CombatBehaviour : GenericBehaviour
     public Animator animator;
     public float mouseTimer;
     public bool isPressed;
-
     void Start()
     {
         isPressed = false;
@@ -16,11 +15,11 @@ public class CombatBehaviour : GenericBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && (behaviourManager.offlineMode || photonView.IsMine))
-        {
-            animator.Play("Base Layer.Dodge");
-            Debug.Log("DODGED");
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && (behaviourManager.offlineMode || photonView.IsMine))
+        //{
+        //    animator.Play("Base Layer.Dodge");
+        //    Debug.Log("DODGED");
+        //}
         // Read mouse input and send whether player pressed or held the attack button
         if (!animator.GetBool("Attacking"))
         {

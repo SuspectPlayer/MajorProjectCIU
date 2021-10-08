@@ -17,9 +17,14 @@ public class MoveBehaviour : GenericBehaviour
 	private bool jump;                              // Boolean to determine whether or not the player started a jump.
 	private bool isColliding;                       // Boolean to determine if the player has collided with an obstacle.
 
+	public float dodgeForce = 1000;
+
+	public float sprintTimer = 0;
+	CombatBehaviour combat;
 	// Start is always called after any Awake functions.
 	void Start()
 	{
+		combat = GetComponent<CombatBehaviour>();
 		// Set up the references.
 		jumpBool = Animator.StringToHash("Jump");
 		groundedBool = Animator.StringToHash("Grounded");
@@ -29,6 +34,7 @@ public class MoveBehaviour : GenericBehaviour
 		behaviourManager.SubscribeBehaviour(this);
 		behaviourManager.RegisterDefaultBehaviour(this.behaviourCode);
 		speedSeeker = runSpeed;
+		sprintTimer = 0;
 	}
 
 	// Update is used to set features regardless the active behaviour.
@@ -42,6 +48,31 @@ public class MoveBehaviour : GenericBehaviour
 				jump = true;
 			}
 		}
+        if (sprintTimer < 0)
+		{
+			sprintTimer = 0;
+        }
+		if(sprintTimer > 1)
+        {
+
+			sprintTimer-= 1 * Time.deltaTime;
+		}
+
+		if (Input.GetKeyDown(KeyCode.LeftShift) && sprintTimer < 1 && behaviourManager.IsMoving())
+		{
+			
+				Dodge();
+				Debug.Log("DODGED");
+			
+		}
+		Debug.Log("SprintTimer" + sprintTimer);
+
+	}
+	public void Dodge()
+    {
+		sprintTimer = 3;
+		behaviourManager.GetRigidBody.AddForce(transform.forward * dodgeForce * Time.deltaTime, ForceMode.VelocityChange);
+		GetComponent<Animator>().Play("Base Layer.Dodge");
 	}
 
 	// LocalFixedUpdate overrides the virtual function of the base class.
@@ -114,8 +145,9 @@ public class MoveBehaviour : GenericBehaviour
 		}
 
 		// Call function that deals with player orientation.
-		Rotating(horizontal, vertical);
-
+		
+			Rotating(horizontal, vertical);
+		
 		// Set proper speed.
 		Vector2 dir = new Vector2(horizontal, vertical);
 		speed = Vector2.ClampMagnitude(dir, 1f).magnitude;

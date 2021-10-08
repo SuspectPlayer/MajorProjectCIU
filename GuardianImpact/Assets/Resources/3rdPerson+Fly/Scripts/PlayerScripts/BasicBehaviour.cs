@@ -298,6 +298,7 @@ public class BasicBehaviour : MonoBehaviourPun
 	// Check if the player is moving.
 	public bool IsMoving()
 	{
+
 		return (h != 0)|| (v != 0);
 	}
 
