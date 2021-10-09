@@ -6,10 +6,13 @@ public class SceneLoader : MonoBehaviour
 {
     public int sceneNumber;
     public KeyCode key;
+    public AudioClip clickSound;
+
     void Update()
     {
         if (Input.GetKey(key))
         {
+            AudioManager.master.ClickButtonSound();
             LoadScene();
         }
     }

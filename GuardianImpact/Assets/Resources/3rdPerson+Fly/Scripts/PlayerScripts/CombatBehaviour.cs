@@ -18,7 +18,7 @@ public class CombatBehaviour : GenericBehaviour
     void Update()
     {
         // Start Mouse timer
-        if (isPressed)
+        if (isPressed && behaviourManager.IsGrounded())
         {
             mouseTimer += 1 * Time.deltaTime;
         }
@@ -44,12 +44,13 @@ public class CombatBehaviour : GenericBehaviour
                 if (!behaviourManager.IsGrounded())
                 {
                     animator.Play("Base Layer.AirAttack");
+                    isPressed = false;
                 }
 
                 
             }
             // Start Charge Attack
-            if (mouseTimer > .25f && !animator.GetBool("Attacking") && chargeReady)
+            if (mouseTimer > .25f && !animator.GetBool("Attacking") && chargeReady && behaviourManager.IsGrounded())
             {
                 animator.Play("Base Layer.Charge");
                 chargeReady = false;

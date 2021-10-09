@@ -5,31 +5,99 @@ using UnityEngine.VFX;
 
 public class SlashControl : MonoBehaviour
 {
-    public GameObject normalAttack;
-    public GameObject normalAttack2;
-    public GameObject focusAttack;
-    public GameObject focusAttackAir;
-    public GameObject counterAttack;
-    
+    // White slash FX
+    public GameObject normalLeftHorizontal;
+    public GameObject normalRightHorizontal;
+    public GameObject normalLeftDiagonalUp;
+    public GameObject normalRightDiagonalUp;
+    public GameObject normalLeftDiagonalDown;
+    public GameObject normalRightDiagonalDown;
+    // Blue slash FX
+    public GameObject focusLeftHorizontal;
+    public GameObject focusRightHorizontal;
+    public GameObject focusLeftDiagonalUp;
+    public GameObject focusRightDiagonalUp;
+    public GameObject focusLeftDiagonalDown;
+    public GameObject focusRightDiagonalDown;
+    // Red slash FX
+    public GameObject counterLeftHorizontal;
+    public GameObject counterRightHorizontal;
+    public GameObject counterLeftDiagonalUp;
+    public GameObject counterRightDiagonalUp;
+    public GameObject counterLeftDiagonalDown;
+    public GameObject counterRightDiagonalDown;
+    public void NLH()
+    {
+        normalLeftHorizontal.GetComponent<VisualEffect>().Play();
+    }
+    public void NRH()
+    {
+        normalRightHorizontal.GetComponent<VisualEffect>().Play();
+    }
+    public void NLDU()
+    {
+        normalLeftDiagonalUp.GetComponent<VisualEffect>().Play();
+    }
+    public void NRDU()
+    {
+        normalRightDiagonalUp.GetComponent<VisualEffect>().Play();
+    }
+    public void NLDD()
+    {
+        normalLeftDiagonalDown.GetComponent<VisualEffect>().Play();
+    }
+    public void NRDD()
+    {
+        normalRightDiagonalDown.GetComponent<VisualEffect>().Play();
+    }
 
-    public void playNormalFX()
+    public void FLH()
     {
-        normalAttack.GetComponent<VisualEffect>().Play();
+        focusLeftHorizontal.GetComponent<VisualEffect>().Play();
     }
-    public void playNormalFX2()
+    public void FRH()
     {
-        normalAttack2.GetComponent<VisualEffect>().Play();
+        focusRightHorizontal.GetComponent<VisualEffect>().Play();
     }
-    public void playFocusFX()
+    public void FLDU()
     {
-        focusAttack.GetComponent<VisualEffect>().Play();
+        focusLeftDiagonalUp.GetComponent<VisualEffect>().Play();
     }
-    public void playAirFocusFX()
+    public void FRDU()
     {
-        focusAttackAir.GetComponent<VisualEffect>().Play();
+        focusRightDiagonalUp.GetComponent<VisualEffect>().Play();
     }
-    public void playCounterFX()
+    public void FLDD()
     {
-        counterAttack.GetComponent<VisualEffect>().Play();
+        focusLeftDiagonalDown.GetComponent<VisualEffect>().Play();
+    }
+    public void FRDD()
+    {
+        focusRightDiagonalDown.GetComponent<VisualEffect>().Play();
+    }
+
+    public void CLH()
+    {
+        counterLeftHorizontal.GetComponent<VisualEffect>().Play();
+    }
+    public void CRH()
+    {
+        counterRightHorizontal.GetComponent<VisualEffect>().Play();
+    }
+    public void CLDU()
+    {
+        counterLeftDiagonalUp.GetComponent<VisualEffect>().Play();
+    }
+    public void CRDU()
+    {
+        counterRightDiagonalUp.GetComponent<VisualEffect>().Play();
+    }
+    public void CLDD()
+    {
+        counterLeftDiagonalDown.GetComponent<VisualEffect>().Play();
+    }
+    public void CRDD()
+    {
+        counterRightDiagonalDown.GetComponent<VisualEffect>().Play();
     }
 }
