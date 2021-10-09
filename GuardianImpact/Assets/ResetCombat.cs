@@ -17,7 +17,7 @@ public class ResetCombat : StateMachineBehaviour
         animator.SetBool("Level2", false);
         animator.SetBool("Level3", false);
         animator.SetBool("Attacking", false);
-        animator.GetComponent<PlayerSync>().SetAttackSequence(AttackSequence.none);
+        animator.GetComponent<PlayerSync>().SetAnimatorSequence(AnimatorSequence.none);
 
     }
 

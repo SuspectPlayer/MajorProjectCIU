@@ -58,21 +58,21 @@ public class MoveBehaviour : GenericBehaviour
 			sprintTimer-= 1 * Time.deltaTime;
 		}
 
-		if (Input.GetKeyDown(KeyCode.LeftShift) && sprintTimer < 1 && behaviourManager.IsMoving())
+		if (Input.GetKeyDown(KeyCode.LeftShift) && (photonView.IsMine || behaviourManager.offlineMode) && sprintTimer < 1 && behaviourManager.IsMoving())
 		{
 			
 				Dodge();
 				Debug.Log("DODGED");
 			
 		}
-		Debug.Log("SprintTimer" + sprintTimer);
+		//Debug.Log("SprintTimer" + sprintTimer);
 
 	}
 	public void Dodge()
     {
 		sprintTimer = 3;
 		behaviourManager.GetRigidBody.AddForce(transform.forward * dodgeForce * Time.deltaTime, ForceMode.VelocityChange);
-		GetComponent<Animator>().Play("Base Layer.Dodge");
+		behaviourManager.GetAnim.Play("Base Layer.Dodge");
 	}
 
 	// LocalFixedUpdate overrides the virtual function of the base class.

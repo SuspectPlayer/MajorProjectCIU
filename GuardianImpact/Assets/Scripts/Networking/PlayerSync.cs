@@ -3,6 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
+
+[System.Serializable]
+public enum AnimatorSequence
+{
+    none,
+    first,
+    second,
+    third,
+    dodge,
+    counter,
+    counterAttack,
+    swordClash,
+
+
+}
 public class PlayerSync : MonoBehaviourPun, IPunObservable
 {
     
@@ -13,7 +28,7 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
     Vector3 networkPosition;
     Quaternion networkRotation;
 
-    AttackSequence currentSequence;
+    AnimatorSequence currentAnimatorSequence;
 
     Animator animator;
 
@@ -31,21 +46,25 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
         if (!useSmoothing || photonView.IsMine) return;
         if (syncRotation) transform.rotation = Quaternion.RotateTowards(transform.rotation, networkRotation, smoothingSpeed * Quaternion.Angle(transform.rotation, networkRotation) * Time.deltaTime * (1.0f / PhotonNetwork.SerializationRate));
     }
-    public void SetAttackSequence(AttackSequence sequenceOrder)
+    public void SetAnimatorSequence(AnimatorSequence sequenceOrder)
     {
-        currentSequence = sequenceOrder;
+        currentAnimatorSequence = sequenceOrder;
+    }
+    public void SetDodge()
+    {
+        currentAnimatorSequence = AnimatorSequence.dodge;
     }
 
     void SyncAttacks()
     {
         AnimatorStateInfo currentStatInfo = animator.GetCurrentAnimatorStateInfo(0);
-        if (currentSequence == AttackSequence.none)
+        if (currentAnimatorSequence == AnimatorSequence.none)
         {
             animator.SetBool("Attack", false);
             animator.SetBool("Attacking", false);
         } 
         // We are suppose to be in the first state
-        else if(currentSequence == AttackSequence.first)
+        else if(currentAnimatorSequence == AnimatorSequence.first)
         {
             // If we are not in the first state, go there
             if(!currentStatInfo.IsName("Attack"))
@@ -54,7 +73,7 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
             }
         }
         // We are suppose to be in the second state
-        else if (currentSequence == AttackSequence.second)
+        else if (currentAnimatorSequence == AnimatorSequence.second)
         {
             // If we're not...
             if(!currentStatInfo.IsName("Attack2"))
@@ -72,7 +91,7 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
             }
         }
         // We are suppose to be in the third state
-        else if (currentSequence == AttackSequence.third)
+        else if (currentAnimatorSequence == AnimatorSequence.third)
         {
             // If we're not...
             if (!currentStatInfo.IsName("Attack3"))
@@ -89,6 +108,26 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
                 }
             }
         }
+        // Dodging
+        else if(currentAnimatorSequence == AnimatorSequence.dodge)
+        {
+            if(!currentStatInfo.IsName("Dodge")) animator.Play("Base Layer.Dodge");
+        }
+        // Counter
+        else if (currentAnimatorSequence == AnimatorSequence.counter)
+        {
+            if (!currentStatInfo.IsName("Counter")) animator.Play("Base Layer.Counter");
+        }
+        // Counterattacking
+        else if (currentAnimatorSequence == AnimatorSequence.counterAttack)
+        {
+            if (!currentStatInfo.IsName("CounterAttack")) animator.Play("Base Layer.CounterAttack");
+        }
+        // Sword clash
+        else if (currentAnimatorSequence == AnimatorSequence.swordClash)
+        {
+            if (!currentStatInfo.IsName("SwordClash")) animator.Play("Base Layer.SwordClash");
+        }
     }
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
@@ -98,7 +137,8 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
             if (syncRotation) stream.SendNext(transform.rotation.eulerAngles.y);
             if (syncAnimator)
             {
-                stream.SendNext(currentSequence);
+                stream.SendNext(currentAnimatorSequence);
+
             }
         }
         // If this isn't owned by the client we read data instead of writing
@@ -111,7 +151,7 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
             }
             if (syncAnimator)
             {
-                currentSequence = (AttackSequence)stream.ReceiveNext();
+                currentAnimatorSequence = (AnimatorSequence)stream.ReceiveNext();
                 SyncAttacks();
 
             }

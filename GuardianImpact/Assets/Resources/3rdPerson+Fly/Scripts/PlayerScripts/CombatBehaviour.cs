@@ -11,7 +11,7 @@ public class CombatBehaviour : GenericBehaviour
     void Start()
     {
         isPressed = false;
-        animator = GetComponent<Animator>();
+        animator = behaviourManager.GetAnim;
         chargeReady = true;
     }
 

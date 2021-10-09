@@ -10,6 +10,7 @@ public class SoundClass
 }
 public class PlayerAudioEffects : MonoBehaviourPun
 {
+    BasicBehaviour basicBehavior;
     [SerializeField] SoundClass[] soundsToAdd;
 
     Dictionary<string, AudioClip> sounds = new Dictionary<string, AudioClip>();
@@ -18,6 +19,7 @@ public class PlayerAudioEffects : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
+        basicBehavior = GetComponent<BasicBehaviour>();
         audioSourceBase = GetComponent<AudioSource>();
         foreach(SoundClass SL in soundsToAdd)
         {
