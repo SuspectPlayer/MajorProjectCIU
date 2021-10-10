@@ -35,8 +35,25 @@ public class PlayerAudioEffects : MonoBehaviourPun
             PlaySoundEffect("TestClip");
         }
     }
-    void PlaySoundEffect(string clipName) 
+    public void PlaySwooshRegular()
     {
+        if (!photonView.IsMine) return;
+        string[] sounds = { "Swoosh1", "Swoosh2", "Swoosh3" };
+        string sound = sounds[Random.Range(0, sounds.Length)];
+
+        PlaySoundEffect(sound);
+    }
+    public void PlaySwooshPower()
+    {
+        if (!photonView.IsMine) return;
+        string[] sounds = { "Swoosh4", "Swoosh5", "Swoosh6" };
+        string sound = sounds[Random.Range(0, sounds.Length)];
+
+        PlaySoundEffect(sound);
+    }
+    void PlaySoundEffect(string clipName)
+    {
+        if (!photonView.IsMine) return;
         Debug.Log($"Trying to play sound : {clipName}.");
 
         AudioClip clipToPlay;

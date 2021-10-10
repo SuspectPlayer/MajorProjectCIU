@@ -13,7 +13,7 @@ public class MainMenuSetup : MonoBehaviour
     {
         Settings settings = SaveAcrossScenes.master.GetComponentInChildren<Settings>();
         settingsButton.onClick.AddListener(settings.OpenSettingsPanel);
-        Button[] allMainMenuButtons = mainMenuCanvas.transform.GetComponentsInChildren<Button>();
+        Button[] allMainMenuButtons = mainMenuCanvas.transform.GetComponentsInChildren<Button>(true);
         for (int i = 0; i < allMainMenuButtons.Length; i++)
         {
             allMainMenuButtons[i].onClick.AddListener(AudioManager.master.ClickButtonSound);
