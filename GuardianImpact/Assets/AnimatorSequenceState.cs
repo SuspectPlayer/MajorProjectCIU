@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class AnimatorSequenceState : StateMachineBehaviour
 {
@@ -10,6 +11,7 @@ public class AnimatorSequenceState : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if(animator.GetComponent<PhotonView>().IsMine || sequenceOrder == AnimatorSequence.beingHit) Debug.Log($"Entering state : {sequenceOrder} on {animator.GetComponent<PhotonView>().ViewID}. Photonview is mine : {animator.GetComponent<PhotonView>().IsMine}.");
         animator.GetComponent<PlayerSync>().SetAnimatorSequence(sequenceOrder);
     }
 

@@ -20,22 +20,27 @@ public enum AnimatorSequence
     charge,
     level2,
     level3,
+    beingHit,
+
 
 
 }
 public class PlayerSync : MonoBehaviourPun, IPunObservable
 {
-    
+
     [SerializeField] bool syncRotation = false;
     [SerializeField] bool useSmoothing = true;
     [SerializeField] bool syncAnimator = true;
+    [SerializeField] bool syncHealth = true;
     [SerializeField] float smoothingSpeed = 130f;
     Vector3 networkPosition;
     Quaternion networkRotation;
 
-    AnimatorSequence currentAnimatorSequence;
+    [SerializeField] AnimatorSequence currentAnimatorSequence;
+    public AnimatorSequence CurrentAnimatorSequence { get { return currentAnimatorSequence; } }
 
     Animator animator;
+    PlayerHealth healthScript;
 
     void OnPhotonInstantiate(PhotonMessageInfo info)
     {
@@ -45,6 +50,7 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        healthScript = GetComponent<PlayerHealth>();
     }
     private void Update()
     {
@@ -165,11 +171,9 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
         if (stream.IsWriting)
         {
             if (syncRotation) stream.SendNext(transform.rotation.eulerAngles.y);
-            if (syncAnimator)
-            {
-                stream.SendNext(currentAnimatorSequence);
+            if (syncAnimator) stream.SendNext(currentAnimatorSequence);
+            if (syncHealth) stream.SendNext(healthScript.Health);
 
-            }
         }
         // If this isn't owned by the client we read data instead of writing
         else if (stream.IsReading)
@@ -183,8 +187,8 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
             {
                 currentAnimatorSequence = (AnimatorSequence)stream.ReceiveNext();
                 SyncAttacks();
-
             }
+            if(syncHealth) healthScript.Health = (float)stream.ReceiveNext();
         }
     }
 }

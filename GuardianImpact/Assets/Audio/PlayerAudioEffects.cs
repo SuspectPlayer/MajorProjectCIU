@@ -27,21 +27,13 @@ public class PlayerAudioEffects : MonoBehaviourPun
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(photonView.IsMine && Input.GetKeyDown(KeyCode.P))
-        {
-            PlaySoundEffect("TestClip");
-        }
-    }
     public void PlaySwooshRegular()
     {
         if (!photonView.IsMine) return;
         string[] sounds = { "Swoosh1", "Swoosh2", "Swoosh3" };
         string sound = sounds[Random.Range(0, sounds.Length)];
 
-        PlaySoundEffect(sound);
+        PlaySoundEffect(sound, true);
     }
     public void PlaySwooshPower()
     {
@@ -49,11 +41,11 @@ public class PlayerAudioEffects : MonoBehaviourPun
         string[] sounds = { "Swoosh4", "Swoosh5", "Swoosh6" };
         string sound = sounds[Random.Range(0, sounds.Length)];
 
-        PlaySoundEffect(sound);
+        PlaySoundEffect(sound, true);
     }
-    void PlaySoundEffect(string clipName)
+    void PlaySoundEffect(string clipName, bool local)
     {
-        if (!photonView.IsMine) return;
+        if (!local && !photonView.IsMine) return;
         Debug.Log($"Trying to play sound : {clipName}.");
 
         AudioClip clipToPlay;
@@ -64,7 +56,7 @@ public class PlayerAudioEffects : MonoBehaviourPun
             return;
         }
         audioSourceBase.PlayOneShot(clipToPlay);
-        photonView.RPC("PlaySoundEffectRPC", RpcTarget.Others, photonView.ViewID, clipName );
+        if(!local) photonView.RPC("PlaySoundEffectRPC", RpcTarget.Others, photonView.ViewID, clipName );
     }
     [PunRPC]
     void PlaySoundEffectRPC(int viewID , string clipName)
