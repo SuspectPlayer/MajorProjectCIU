@@ -3,18 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class DamagePlayer : MonoBehaviour
+public class DamagePlayer : MonoBehaviourPun
 {
+    List<int> targetsHitThisTime = new List<int>();
+    private void Awake()
+    {
+    }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit player");
 
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<DamageChecker>().photonView.RPC("GotHit", RpcTarget.AllViaServer);
+            // Get the photonview of the target
+            PhotonView targetView = other.GetComponent<DamageChecker>().photonView;
 
-            Debug.Log("Hit player");
+            // This player is the attacker, send RPC over the server
+            if (photonView.IsMine)
+            {
+                // If we already dealth damage to this player, return
+                if (targetsHitThisTime.Contains(targetView.OwnerActorNr)) return;
+
+                // Call the GotHit mehtod on the target
+                targetView.RPC("GotHitRemote", targetView.Owner, photonView.OwnerActorNr);
+                targetsHitThisTime.Add(targetView.OwnerActorNr);
+                Debug.Log($"{photonView.OwnerActorNr} hit player {targetView.OwnerActorNr} (Remote)");
+            }
+            // This is someone elses player doing the attack. Check if we're being attacked and do the sync check if that's true
+            else
+            {
+                //Debug.Log($"Target is {targetView.OwnerActorNr}. Trigger detected on {GetComponentInParent<PhotonView>().OwnerActorNr}.");
+                // If we already dealth damage to this player, return
+                if (targetsHitThisTime.Contains(targetView.OwnerActorNr)) return;
+                int attackerID = GetComponentInParent<PhotonView>().OwnerActorNr;
+                other.GetComponent<DamageChecker>().GotHitLocal(attackerID);
+            }
         }
+    }
+
+    private void OnDisable()
+    {
+        // Reset the list of hit targets when this gameobject is disabled
+        targetsHitThisTime.Clear();
     }
 
     //private void OnCollisionEnter(Collision collision)
