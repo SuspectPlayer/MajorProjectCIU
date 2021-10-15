@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-
 public class DamageChecker : MonoBehaviourPunCallbacks
 {
     [System.Serializable]
     protected class DamageSyncChecker
     {
         public int id;
+        public Photon.Realtime.Player player;
+        public AnimatorSequence attackerSequence;
         public bool remoteComfirmed;
         public bool localComfirmed;
         public float time;
     }
 
     CharacterInformation characterInformation;
+    PlayerSync defenderSync;
+    BasicBehaviour basicBehavior;
     [SerializeField] float syncTime = 0.15f;
     // test variables
     private int attackerIndex = -1;
@@ -27,6 +30,8 @@ public class DamageChecker : MonoBehaviourPunCallbacks
     private void Awake()
     {
         characterInformation = GetComponent<CharacterInformation>();
+        defenderSync = GetComponent<PlayerSync>();
+        basicBehavior = GetComponent<BasicBehaviour>();
         damageSyncCheckers = new List<DamageSyncChecker>();
     }
 
@@ -53,13 +58,13 @@ public class DamageChecker : MonoBehaviourPunCallbacks
             if (damageSyncCheckers[i].time > syncTime)
             {
                 survive = false;
-                Validation(damageSyncCheckers[i].id, false);
+                Validation(damageSyncCheckers[i], false);
             }
             // Validated successfully
             if (damageSyncCheckers[i].localComfirmed && damageSyncCheckers[i].remoteComfirmed)
             {
                 survive = false;
-                Validation(damageSyncCheckers[i].id, true);
+                Validation(damageSyncCheckers[i], true);
             }
             damageSyncCheckers[i].time += Time.deltaTime;
 
@@ -67,15 +72,70 @@ public class DamageChecker : MonoBehaviourPunCallbacks
         }
         damageSyncCheckers = surviveToNextFrame;
     }
-    void Validation(int attacker, bool succeeded)
+    void Validation(DamageSyncChecker attacker, bool succeeded)
     {
         if(succeeded)
         {
-            Debug.Log($"Validation succeeded. {attacker} comfirmed as attacker on {photonView.OwnerActorNr}.");
+            Debug.Log($"Validation succeeded. {attacker.id} comfirmed as attacker on {photonView.OwnerActorNr}.");
+            ReactionToAttack(attacker);
+
         }
         else
         {
-            Debug.Log($"Validation failed. {attacker} failed to attack {photonView.OwnerActorNr}. Time ran out.");
+            Debug.Log($"Validation failed. {attacker.id} failed to attack {photonView.OwnerActorNr}. Time ran out.");
+        }
+    }
+    // This is running on the targets/defenders machine
+    void ReactionToAttack(DamageSyncChecker attacker)
+    {
+        AnimatorSequence defenderSequence = defenderSync.CurrentAnimatorSequence;
+        Debug.Log($"ReactionToAttack is running. Attacker's AnimatorSequence is {attacker.attackerSequence}. Defender's AnimationSequence is {defenderSequence}.");
+        string stateNameLocal = string.Empty;
+        string stateNameRemote = string.Empty;
+        if(defenderSequence == AnimatorSequence.counter)
+        {
+            stateNameLocal = "CounterAttack";
+        }
+        // Defender is dodging
+        else if(defenderSequence == AnimatorSequence.dodge)
+        {
+            stateNameLocal = string.Empty;
+        }
+        // Attacker does a regular attack
+        else if(attacker.attackerSequence == AnimatorSequence.first || attacker.attackerSequence == AnimatorSequence.second)
+        {
+            // If attacker and defender are both in either state 1 or 2, swords will clash
+            if (defenderSequence == AnimatorSequence.first || defenderSequence == AnimatorSequence.second) stateNameLocal = stateNameRemote = "SwordClash";
+            else if(defenderSequence == AnimatorSequence.third)
+            {
+                stateNameRemote = "GetHitRegular";
+            }
+            else if(defenderSequence == AnimatorSequence.airAttack)
+            {
+                stateNameRemote = "GetHitAir";
+            }
+            else
+            {
+                stateNameLocal = "GetHitRegular";
+            }
+        }
+        // Attacker does a power attack
+        else if(attacker.attackerSequence == AnimatorSequence.third || attacker.attackerSequence == AnimatorSequence.airAttack)
+        {
+            if (defenderSequence == AnimatorSequence.dodge) stateNameLocal = string.Empty;
+            else if (defenderSequence == AnimatorSequence.third || defenderSequence == AnimatorSequence.airAttack) stateNameLocal = stateNameRemote = "SwordClash";
+        }
+
+        if (stateNameLocal != string.Empty) {
+            stateNameLocal = "Base Layer." + stateNameLocal;
+            Debug.Log($"Trying to play state : {stateNameLocal} on {photonView.OwnerActorNr}");
+            basicBehavior.GetAnim.Play(stateNameLocal);
+        }
+        if(stateNameRemote != string.Empty)
+        {
+            stateNameRemote = "Base Layer." + stateNameRemote;
+            Debug.Log($"Trying to play state : {stateNameRemote} on {attacker.id}");
+            photonView.RPC("ReturnCallFromTarget", attacker.player, stateNameRemote);
         }
     }
 
@@ -101,40 +161,52 @@ public class DamageChecker : MonoBehaviourPunCallbacks
     //    }
     //}
 
+    [PunRPC]
+    public void ReturnCallFromTarget(string returnAnimation)
+    {
+        basicBehavior.GetAnim.Play(returnAnimation);
+    }
+
     // method called by attacker
     [PunRPC]
-    public void GotHitRemote(int attackerSent)
+    public void GotHitRemote(Photon.Realtime.Player attackerSent, AnimatorSequence attackerSequence)
     {
-        attackerSentIndex = attackerSent;
+        attackerSentIndex = attackerSent.ActorNumber;
 
         // start coroutine to validate attack sending the attackers number from detected collision
         //StartCoroutine("ValidateAttack");
 
-        Debug.Log($"{photonView.OwnerActorNr} hit by {attackerSent} (Remote)");
-        AddIDToDamageSync(attackerSent, false);
+        Debug.Log($"{photonView.OwnerActorNr} hit by {attackerSent.ActorNumber} (Remote)");
+        AddIDToDamageSync(attackerSent, attackerSequence, false);
     }
-    public void GotHitLocal(int attackerSent)
+    public void GotHitLocal(Photon.Realtime.Player attackerSent)
     {
         Debug.Log($"{photonView.OwnerActorNr} hit by {attackerSent} (Local)");
-        AddIDToDamageSync(attackerSent, true);
+        AddIDToDamageSync(attackerSent, AnimatorSequence.none, true);
     }
 
-    void AddIDToDamageSync(int attackerID, bool local)
+    void AddIDToDamageSync(Photon.Realtime.Player attackerSent, AnimatorSequence attackerSequence, bool local)
     {
         // Try to find an item in the list that matches the attacker ID, returns -1 if one can't be found
-        int index = damageSyncCheckers.FindIndex(item => item.id == attackerID);
+        int index = damageSyncCheckers.FindIndex(item => item.id == attackerSent.ActorNumber);
 
         if (index >= 0)
         {
             // element exists, do what you need
             if (local) damageSyncCheckers[index].localComfirmed = true;
-            else damageSyncCheckers[index].remoteComfirmed = true;
+            else
+            {
+                damageSyncCheckers[index].attackerSequence = attackerSequence;
+                damageSyncCheckers[index].remoteComfirmed = true;
+            }
         }
         else
         {
             // Create a new item and add the variables
             DamageSyncChecker newItem = new DamageSyncChecker();
-            newItem.id = attackerID;
+            newItem.id = attackerSent.ActorNumber;
+            newItem.player = attackerSent;
+            newItem.attackerSequence = attackerSequence;
             if (local) newItem.localComfirmed = true;
             else newItem.remoteComfirmed = true;
 

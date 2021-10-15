@@ -6,8 +6,10 @@ using Photon.Pun;
 public class DamagePlayer : MonoBehaviourPun
 {
     List<int> targetsHitThisTime = new List<int>();
+    PlayerSync playerSync;
     private void Awake()
     {
+        playerSync = GetComponentInParent<PlayerSync>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -24,7 +26,7 @@ public class DamagePlayer : MonoBehaviourPun
                 if (targetsHitThisTime.Contains(targetView.OwnerActorNr)) return;
 
                 // Call the GotHit mehtod on the target
-                targetView.RPC("GotHitRemote", targetView.Owner, photonView.OwnerActorNr);
+                targetView.RPC("GotHitRemote", targetView.Owner, photonView.Owner, playerSync.CurrentAnimatorSequence);
                 targetsHitThisTime.Add(targetView.OwnerActorNr);
                 Debug.Log($"{photonView.OwnerActorNr} hit player {targetView.OwnerActorNr} (Remote)");
             }
@@ -34,8 +36,8 @@ public class DamagePlayer : MonoBehaviourPun
                 //Debug.Log($"Target is {targetView.OwnerActorNr}. Trigger detected on {GetComponentInParent<PhotonView>().OwnerActorNr}.");
                 // If we already dealth damage to this player, return
                 if (targetsHitThisTime.Contains(targetView.OwnerActorNr)) return;
-                int attackerID = GetComponentInParent<PhotonView>().OwnerActorNr;
-                other.GetComponent<DamageChecker>().GotHitLocal(attackerID);
+                Photon.Realtime.Player attackerPlayer = GetComponentInParent<PhotonView>().Owner;
+                other.GetComponent<DamageChecker>().GotHitLocal(attackerPlayer);
             }
         }
     }
