@@ -14,7 +14,7 @@ public class DamagePlayer : MonoBehaviourPun
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.transform != transform.parent)
         {
             // Get the photonview of the target
             PhotonView targetView = other.GetComponent<DamageChecker>().photonView;
