@@ -5,6 +5,7 @@ using UnityEngine.VFX;
 
 public class SlashControl : MonoBehaviour
 {
+    public GameObject damageSphere;
     // White slash FX
     public GameObject normalLeftHorizontal;
     public GameObject normalRightHorizontal;
@@ -26,78 +27,98 @@ public class SlashControl : MonoBehaviour
     public GameObject counterRightDiagonalUp;
     public GameObject counterLeftDiagonalDown;
     public GameObject counterRightDiagonalDown;
+
+    private void Start()
+    {
+        damageSphere.SetActive(false);
+    }
+
+    public void damageSphereOn()
+    {
+        if (!damageSphere.activeSelf)
+        {
+            damageSphere.SetActive(true);
+        }
+    }
+    public void damageSphereOff()
+    {
+        if (damageSphere.activeSelf)
+        {
+            damageSphere.SetActive(false);
+        }
+    }
     public void NLH()
     {
-        normalLeftHorizontal.GetComponent<VisualEffect>().Play();
+        normalLeftHorizontal.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void NRH()
     {
-        normalRightHorizontal.GetComponent<VisualEffect>().Play();
+        normalRightHorizontal.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void NLDU()
     {
-        normalLeftDiagonalUp.GetComponent<VisualEffect>().Play();
+        normalLeftDiagonalUp.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void NRDU()
     {
-        normalRightDiagonalUp.GetComponent<VisualEffect>().Play();
+        normalRightDiagonalUp.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void NLDD()
     {
-        normalLeftDiagonalDown.GetComponent<VisualEffect>().Play();
+        normalLeftDiagonalDown.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void NRDD()
     {
-        normalRightDiagonalDown.GetComponent<VisualEffect>().Play();
+        normalRightDiagonalDown.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
 
     public void FLH()
     {
-        focusLeftHorizontal.GetComponent<VisualEffect>().Play();
+        focusLeftHorizontal.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void FRH()
     {
-        focusRightHorizontal.GetComponent<VisualEffect>().Play();
+        focusRightHorizontal.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void FLDU()
     {
-        focusLeftDiagonalUp.GetComponent<VisualEffect>().Play();
+        focusLeftDiagonalUp.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void FRDU()
     {
-        focusRightDiagonalUp.GetComponent<VisualEffect>().Play();
+        focusRightDiagonalUp.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void FLDD()
     {
-        focusLeftDiagonalDown.GetComponent<VisualEffect>().Play();
+        focusLeftDiagonalDown.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void FRDD()
     {
-        focusRightDiagonalDown.GetComponent<VisualEffect>().Play();
+        focusRightDiagonalDown.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
 
     public void CLH()
     {
-        counterLeftHorizontal.GetComponent<VisualEffect>().Play();
+        counterLeftHorizontal.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void CRH()
     {
-        counterRightHorizontal.GetComponent<VisualEffect>().Play();
+        counterRightHorizontal.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void CLDU()
     {
-        counterLeftDiagonalUp.GetComponent<VisualEffect>().Play();
+        counterLeftDiagonalUp.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void CRDU()
     {
-        counterRightDiagonalUp.GetComponent<VisualEffect>().Play();
+        counterRightDiagonalUp.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void CLDD()
     {
-        counterLeftDiagonalDown.GetComponent<VisualEffect>().Play();
+        counterLeftDiagonalDown.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
     public void CRDD()
     {
-        counterRightDiagonalDown.GetComponent<VisualEffect>().Play();
+        counterRightDiagonalDown.GetComponent<VisualEffect>().Play(); damageSphereOn();
     }
 }

@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager master;
     [SerializeField] AudioSource UIAudioSource;
     [SerializeField] AudioSource MusicAudioSource;
+    [SerializeField] AudioSource SFXAudioSource;
 
 
     [Header("Music Sounds")]
@@ -174,6 +175,10 @@ public class AudioManager : MonoBehaviour
         if (messageTimer > 0) return;
         messageTimer = cooldownTime;
         UIAudioSource.PlayOneShot(message);
+    }
+    public void PlaySFXOneShot(AudioClip clipToPlay)
+    {
+        SFXAudioSource.PlayOneShot(clipToPlay);
     }
     #endregion Custom functions
 }
