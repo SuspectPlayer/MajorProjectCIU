@@ -30,6 +30,10 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         master = this;
         // If you are in a room and the owner loads a new scene it will load the same scene for everyone in the room
         PhotonNetwork.AutomaticallySyncScene = forceJoinWaitingServer ? true : false ;
+       
+    }
+    private void Start()
+    {
         IdleMenu();
     }
 
