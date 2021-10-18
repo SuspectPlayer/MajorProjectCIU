@@ -20,6 +20,8 @@ public enum AnimatorSequence
     charge,
     level2,
     level3,
+    beingHitRegular,
+    beingHitAir,
 
 
 }
@@ -33,7 +35,8 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
     Vector3 networkPosition;
     Quaternion networkRotation;
 
-    AnimatorSequence currentAnimatorSequence;
+    [SerializeField] AnimatorSequence currentAnimatorSequence;
+    public AnimatorSequence CurrentAnimatorSequence {  get { return currentAnimatorSequence; } }
 
     Animator animator;
 
@@ -148,14 +151,13 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
         {
             if (!currentStatInfo.IsName("Charge")) animator.Play("Base Layer.Charge");
         }
-        // Level 2
-        else if (currentAnimatorSequence == AnimatorSequence.level2)
+        else if(currentAnimatorSequence == AnimatorSequence.beingHitRegular)
         {
-            if (!currentStatInfo.IsName("Level2")) animator.Play("Base Layer.Level2");
-        }// Level 3
-        else if (currentAnimatorSequence == AnimatorSequence.level3)
+            if (!currentStatInfo.IsName("GetHitRegular")) animator.Play("Base Layer.GetHitRegular");
+        }
+        else if(currentAnimatorSequence == AnimatorSequence.beingHitAir)
         {
-            if (!currentStatInfo.IsName("Level3")) animator.Play("Base Layer.Level3");
+            if (!currentStatInfo.IsName("GetHitAir")) animator.Play("Base Layer.GetHitAir");
         }
 
     }
